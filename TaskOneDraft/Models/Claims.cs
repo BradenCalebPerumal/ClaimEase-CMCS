@@ -15,8 +15,10 @@ namespace TaskOneDraft.Models
 
         [Required]
         public string LastName { get; set; }
+
         [Required]
         public string Email { get; set; }
+
         [Required]
         public DateTime ClaimsPeriodStart { get; set; }
 
@@ -29,6 +31,11 @@ namespace TaskOneDraft.Models
         [Required]
         public double RateHour { get; set; }
 
+        // Overtime fields
+        public double? OvertimeHours { get; set; } // Nullable, as it's optional
+        public double? OvertimeRate { get; set; } // Nullable, as it's optional
+        public double OvertimePay => (OvertimeHours ?? 0) * (OvertimeRate ?? 0); // Calculated field
+
         [Required]
         public double TotalAmount { get; set; }
 
@@ -38,23 +45,22 @@ namespace TaskOneDraft.Models
         [DataType(DataType.MultilineText)]
         public string SupportingDocuments { get; set; }
 
-        // Property to link claims to the logged-in lecturer by UserID
         [Required]
         public string UserID { get; set; }
 
-        // Add a property for Claim Status with a default value of 'Pending'
         [Required]
         [StringLength(20)]
-        public string ClaimStatus { get; set; } = "Pending"; // Set default status to "Pending"
-                                                             // Property to store the date and time the claim was submitted
-        public DateTime DateSubmitted { get; set; } = DateTime.Now;  // Automatically set to the current date and time
+        public string ClaimStatus { get; set; } = "Pending";
+
+        public DateTime DateSubmitted { get; set; } = DateTime.Now;
+
         public virtual ICollection<FilesModel> File { get; set; }
 
         public Claims()
         {
             File = new HashSet<FilesModel>();
         }
-
     }
+
 }
 

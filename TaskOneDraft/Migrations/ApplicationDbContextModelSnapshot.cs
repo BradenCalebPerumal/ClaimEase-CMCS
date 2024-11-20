@@ -274,6 +274,12 @@ namespace TaskOneDraft.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<double?>("OvertimeHours")
+                        .HasColumnType("float");
+
+                    b.Property<double?>("OvertimeRate")
+                        .HasColumnType("float");
+
                     b.Property<double>("RateHour")
                         .HasColumnType("float");
 

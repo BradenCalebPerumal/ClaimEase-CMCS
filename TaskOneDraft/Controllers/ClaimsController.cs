@@ -180,164 +180,172 @@ namespace TaskOneDraft.Controllers
         }
 
         //post: submit claims
-        [HttpPost]
-        public async Task<IActionResult> Claims(Claims claims, IFormFile supportingDocument)
+[HttpPost]
+public async Task<IActionResult> Claims(Claims claims, IFormFile supportingDocument)
+{
+    Console.WriteLine("Claims action called"); // Log action call
+
+    string userId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Assign logged-in lecturer's userId
+    claims.UserID = userId;
+    Console.WriteLine($"Assigned UserID: {claims.UserID}"); // Log assigned userId
+    ModelState.Remove("UserID");
+    ModelState.Remove("Email");
+    claims.ClaimStatus = "Pending"; // Set claim status to "pending"
+    ModelState.Remove("ClaimStatus");
+    ModelState.Remove("DateSubmitted");
+
+    // Handling the supporting document
+    if (supportingDocument != null && supportingDocument.Length > 0)
+    {
+        using (var ms = new MemoryStream())
         {
-            Console.WriteLine("Claims action called"); // Log action call
+            await supportingDocument.CopyToAsync(ms);
+            var fileBytes = ms.ToArray();
+            // Convert the file to a base64 string
+            string base64String = Convert.ToBase64String(fileBytes).Substring(0, 15);
+            string fileExtension = Path.GetExtension(supportingDocument.FileName);
 
-            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Assign logged-in lecturer's userId
-            claims.UserID = userId;
-            Console.WriteLine($"Assigned UserID: {claims.UserID}"); // Log assigned userId
-            ModelState.Remove("UserID");
-            ModelState.Remove("Email");
-            claims.ClaimStatus = "Pending"; //set claim status to "pending"
-            ModelState.Remove("ClaimStatus");
-            ModelState.Remove("DateSubmitted");
-            //Handling the supporting document
-            if (supportingDocument != null && supportingDocument.Length > 0)
-            {
-                using (var ms = new MemoryStream())
-                {
-                    await supportingDocument.CopyToAsync(ms);
-                    var fileBytes = ms.ToArray();
-                    //Convert the file to a base64 string
-                    string base64String = Convert.ToBase64String(fileBytes).Substring(0, 15);
-                    string fileExtension = Path.GetExtension(supportingDocument.FileName);
-             
-                    string distinctPrefix = $"{claims.FirstName}_{claims.LastName}_[{claims.DateSubmitted}]";
-                    claims.SupportingDocuments = distinctPrefix + base64String+ fileExtension;
-                }
-            }   
-            else
-            {
-                claims.SupportingDocuments = null; //Handle case where no document is provided
-                Console.WriteLine("No supporting documents provided or file is empty.");
-            }
-            ModelState.Remove("supportingDocument");
-            ModelState.Remove("SupportingDocuments");
-            if (string.IsNullOrEmpty(userId))
-            {
-                ModelState.AddModelError("UserID", "User must be logged in to submit a claim."); // Add error if userId not found
-                return View(claims);
-            }
-
-            //etrieve user's email from the UserManager
-            var user = await _userManager.FindByIdAsync(userId);
-            if (user != null)
-            {
-                claims.Email = user.Email; //Set email from the current logged in user
-            }
-            else
-            {
-                ModelState.AddModelError("Email", "Failed to retrieve user email.");
-                return View(claims);
-            }
-
-
-
-            if (ModelState.IsValid)
-            {
-                Console.WriteLine("ModelState is valid"); //Log valid model state
-                claims.DateSubmitted = DateTime.Now;
-                claims.TotalAmount = claims.HoursWorked * claims.RateHour; //calculate total amount
-                _context.Add(claims); //Add claim to database
-                await _context.SaveChangesAsync(); //Save changes
-                Console.WriteLine("Claim saved successfully"); //Log claim saved
-
-                //*********************************************************************************************
-
-                //handle the supporting document
-                if (supportingDocument != null && supportingDocument.Length > 0)
-                {
-                    Console.WriteLine($"File '{supportingDocument.FileName}' detected. Size: {supportingDocument.Length} bytes.");
-
-                    var permittedExtensions = new[] { ".jpg", ".jpeg", ".png", ".docx", ".xlsx", ".pdf" };
-                    var extension = Path.GetExtension(supportingDocument.FileName).ToLowerInvariant();
-
-                    if (string.IsNullOrEmpty(extension) || !permittedExtensions.Contains(extension))
-                    {
-                        Console.WriteLine("Invalid file type detected.");
-                        ModelState.AddModelError("", "Invalid file type.");
-                        return View(claims);
-                    }
-
-                    var mimeType = supportingDocument.ContentType;
-                    var permittedMimeTypes = new[]
-                    {
-                        "image/jpeg",  //For .jpg and .jpeg
-                        "image/png",   //For .png
-                        "application/vnd.openxmlformats-officedocument.wordprocessingml.document", //For .docx 
-                        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",       //For .xlsx 
-                        "application/pdf"  //For .pdf
-                    };
-                    if (!permittedMimeTypes.Contains(mimeType))
-                    {
-                        Console.WriteLine("Invalid MIME type detected.");
-                        ModelState.AddModelError("", "Invalid MIME type.");
-                        return View(claims);
-                    }
-
-                    //Ensure the uploads directory exists
-                    var uploadsFolderPath = Path.Combine(webHostEnvironment.WebRootPath, "uploads");
-                    if (!Directory.Exists(uploadsFolderPath))
-                    {
-                        Directory.CreateDirectory(uploadsFolderPath);
-                        Console.WriteLine("Uploads directory created.");
-                    }
-
-                    //Generate a unique file name
-                    var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(supportingDocument.FileName);
-                    var filePath = Path.Combine(uploadsFolderPath, uniqueFileName);
-
-                    //Save the file physically on disk
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await supportingDocument.CopyToAsync(stream);
-                        Console.WriteLine("File saved successfully to disk.");
-                    }
-
-                    //Create the FilesModel entry and link it to the saved claim
-                    var fileModel = new FilesModel
-                    {
-                        FileName = uniqueFileName,
-                        Length = supportingDocument.Length,
-                        ContentType = mimeType,
-                        Data = System.IO.File.ReadAllBytes(filePath), //Optionally store the file data
-                        ClaimId = claims.ID //Link the file to the saved claim
-                    };
-
-                    _context.Files.Add(fileModel); //Add the file to the context
-                    await _context.SaveChangesAsync(); //Save the file
-
-                    Console.WriteLine("File model added to the database.");
-                }
-                else
-                {
-                    claims.SupportingDocuments = ""; //If no file, assign an empty string
-                    Console.WriteLine("No supporting documents provided or file is empty.");
-                }
-
-
-
-                //*********************************************************************************************
-                return RedirectToAction("ClaimSummary", new { id = claims.ID });
-            }
-            else
-            {
-                Console.WriteLine("ModelState is invalid"); //Log invalid model state
-                                                            //List all ModelState errors
-                foreach (var modelStateKey in ModelState.Keys)
-                {
-                    var modelStateVal = ModelState[modelStateKey];
-                    foreach (var error in modelStateVal.Errors)
-                    {
-                        Console.WriteLine($"Key: {modelStateKey}, Error: {error.ErrorMessage}"); //Log each error
-                    }
-                }
-            }
-
-            return View(claims); //Return view with claim data
+            string distinctPrefix = $"{claims.FirstName}_{claims.LastName}_[{claims.DateSubmitted}]";
+            claims.SupportingDocuments = distinctPrefix + base64String + fileExtension;
         }
+    }
+    else
+    {
+        claims.SupportingDocuments = null; // Handle case where no document is provided
+        Console.WriteLine("No supporting documents provided or file is empty.");
+    }
+
+    ModelState.Remove("supportingDocument");
+    ModelState.Remove("SupportingDocuments");
+
+    if (string.IsNullOrEmpty(userId))
+    {
+        ModelState.AddModelError("UserID", "User must be logged in to submit a claim."); // Add error if userId not found
+        return View(claims);
+    }
+
+    // Retrieve user's email from the UserManager
+    var user = await _userManager.FindByIdAsync(userId);
+    if (user != null)
+    {
+        claims.Email = user.Email; // Set email from the current logged-in user
+    }
+    else
+    {
+        ModelState.AddModelError("Email", "Failed to retrieve user email.");
+        return View(claims);
+    }
+
+    if (ModelState.IsValid)
+    {
+        Console.WriteLine("ModelState is valid"); // Log valid model state
+        claims.DateSubmitted = DateTime.Now;
+
+        // Calculate total amount
+        claims.TotalAmount = claims.HoursWorked * claims.RateHour;
+
+        // Add overtime to total if applicable
+        if (claims.OvertimeHours.HasValue && claims.OvertimeRate.HasValue)
+        {
+            claims.TotalAmount += claims.OvertimeHours.Value * claims.OvertimeRate.Value;
+        }
+
+        _context.Add(claims); // Add claim to database
+        await _context.SaveChangesAsync(); // Save changes
+        Console.WriteLine("Claim saved successfully"); // Log claim saved
+
+        //*********************************************************************************************
+
+        // Handle the supporting document
+        if (supportingDocument != null && supportingDocument.Length > 0)
+        {
+            Console.WriteLine($"File '{supportingDocument.FileName}' detected. Size: {supportingDocument.Length} bytes.");
+
+            var permittedExtensions = new[] { ".jpg", ".jpeg", ".png", ".docx", ".xlsx", ".pdf" };
+            var extension = Path.GetExtension(supportingDocument.FileName).ToLowerInvariant();
+
+            if (string.IsNullOrEmpty(extension) || !permittedExtensions.Contains(extension))
+            {
+                Console.WriteLine("Invalid file type detected.");
+                ModelState.AddModelError("", "Invalid file type.");
+                return View(claims);
+            }
+
+            var mimeType = supportingDocument.ContentType;
+            var permittedMimeTypes = new[]
+            {
+                "image/jpeg",  // For .jpg and .jpeg
+                "image/png",   // For .png
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.document", // For .docx
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",       // For .xlsx
+                "application/pdf"  // For .pdf
+            };
+            if (!permittedMimeTypes.Contains(mimeType))
+            {
+                Console.WriteLine("Invalid MIME type detected.");
+                ModelState.AddModelError("", "Invalid MIME type.");
+                return View(claims);
+            }
+
+            // Ensure the uploads directory exists
+            var uploadsFolderPath = Path.Combine(webHostEnvironment.WebRootPath, "uploads");
+            if (!Directory.Exists(uploadsFolderPath))
+            {
+                Directory.CreateDirectory(uploadsFolderPath);
+                Console.WriteLine("Uploads directory created.");
+            }
+
+            // Generate a unique file name
+            var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(supportingDocument.FileName);
+            var filePath = Path.Combine(uploadsFolderPath, uniqueFileName);
+
+            // Save the file physically on disk
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await supportingDocument.CopyToAsync(stream);
+                Console.WriteLine("File saved successfully to disk.");
+            }
+
+            // Create the FilesModel entry and link it to the saved claim
+            var fileModel = new FilesModel
+            {
+                FileName = uniqueFileName,
+                Length = supportingDocument.Length,
+                ContentType = mimeType,
+                Data = System.IO.File.ReadAllBytes(filePath), // Optionally store the file data
+                ClaimId = claims.ID // Link the file to the saved claim
+            };
+
+            _context.Files.Add(fileModel); // Add the file to the context
+            await _context.SaveChangesAsync(); // Save the file
+
+            Console.WriteLine("File model added to the database.");
+        }
+        else
+        {
+            claims.SupportingDocuments = ""; // If no file, assign an empty string
+            Console.WriteLine("No supporting documents provided or file is empty.");
+        }
+
+        //*********************************************************************************************
+        return RedirectToAction("ClaimSummary", new { id = claims.ID });
+    }
+    else
+    {
+        Console.WriteLine("ModelState is invalid"); // Log invalid model state
+        foreach (var modelStateKey in ModelState.Keys)
+        {
+            var modelStateVal = ModelState[modelStateKey];
+            foreach (var error in modelStateVal.Errors)
+            {
+                Console.WriteLine($"Key: {modelStateKey}, Error: {error.ErrorMessage}"); // Log each error
+            }
+        }
+    }
+
+    return View(claims); // Return view with claim data
+}
+
         //action to display claim submitted view
         public async Task<IActionResult> ClaimSummary(int id)
         {

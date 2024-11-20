@@ -141,12 +141,42 @@
                 </div>
             </div>
         </div>
+        <!-- Overtime Section -->
+        <div class="form-group">
+            <label>
+                <input type="checkbox" id="addOvertime" /> Add Overtime
+            </label>
+        </div>
+        <div id="overtimeFields" style="display: none;">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="OvertimeHours">Overtime Hours</label>
+                        <input asp-for="OvertimeHours" class="form-control" id="overtimeHours" />
+                        <span asp-validation-for="OvertimeHours" class="text-danger" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="OvertimeRate">Overtime Rate</label>
+                        <input asp-for="OvertimeRate" class="form-control" id="overtimeRate" readonly />
+                        <span asp-validation-for="OvertimeRate" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Description of Work takes full width -->
         <div class="form-group">
             <label asp-for="DescriptionOfWork">Description of Work</label>
             <input asp-for="DescriptionOfWork" class="form-control" />
-            <span asp-validation-for="DescriptionOfWork" class="text-danger" />
+            <span asp-validation-for="DescriptionOfWork" class="text-danger"></span>
+        </div>
+
+        <!-- Total Amount (Read-only) -->
+        <div class="form-group">
+            <label>Total Amount</label>
+            <input type="text" id="totalAmount" class="form-control" readonly />
         </div>
 
         <!-- Supporting Documents -->
@@ -163,92 +193,45 @@
 </div>
 
 @section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
-
     <script>
         $(document).ready(function () {
-            $('#claimForm').on('submit', function (event) {
-                event.preventDefault();
-
-                toastr.clear(); // Clear previous toastr messages
-
-                // Clear previous error messages
-                $('.text-danger').text('');
-
-                // Validate required fields
-                var isValid = true;
-                $('#claimForm input[required], #claimForm textarea[required]').each(function () {
-                    if ($(this).val().trim() === '') {
-                        isValid = false;
-                        $(this).addClass('is-invalid'); // Highlight invalid fields
-
-                        // Show error message below the field
-                        $(this).next('.text-danger').text('This field is required.');
-                    } else {
-                        $(this).removeClass('is-invalid');
-                        $(this).next('.text-danger').text(''); // Clear the error message
-                    }
-                });
-
-                if (!isValid) {
-                    toastr.error('Please fill in all required fields.', 'Form Error', {
-                        "positionClass": "toast-top-right",
-                        "timeOut": "5000",
-                        "closeButton": true,
-                        "progressBar": true
-                    });
-                    return; // Prevent further execution
+            // Toggle overtime fields
+            $('#addOvertime').change(function () {
+                if (this.checked) {
+                    $('#overtimeFields').slideDown();
+                    calculateOvertimeRate(); // Populate overtime rate dynamically
+                } else {
+                    $('#overtimeFields').slideUp();
+                    $('#overtimeHours').val('');
+                    $('#overtimeRate').val('');
                 }
+            });
 
-                // Validate file input for specific extensions
-                var fileInput = document.getElementById("supportingDocument");
-                var file = fileInput.files[0];
+            // Calculate overtime rate dynamically
+            function calculateOvertimeRate() {
+                const ratePerHour = parseFloat($('#ratePerHour').val()) || 0;
+                const overtimeRate = ratePerHour * 1.5;
+                $('#overtimeRate').val(overtimeRate.toFixed(2)); // Set calculated overtime rate
+            }
 
-                if (file) {
-                    var validExtensions = [".jpg", ".jpeg", ".png", ".docx", ".xlsx", ".pdf"];
-                    var fileName = file.name.toLowerCase();
-                    var fileExtension = fileName.substring(fileName.lastIndexOf('.'));
+            // Calculate total amount dynamically
+            function calculateTotal() {
+                const hoursWorked = parseFloat($('#hoursWorked').val()) || 0;
+                const ratePerHour = parseFloat($('#ratePerHour').val()) || 0;
+                const overtimeHours = parseFloat($('#overtimeHours').val()) || 0;
+                const overtimeRate = parseFloat($('#overtimeRate').val()) || 0;
 
-                    if (!validExtensions.includes(fileExtension)) {
-                        toastr.error('Invalid file type! Attach documents that are .jpg, .jpeg, .png, .docx, .xlsx, .pdf.', 'File Error', {
-                            "positionClass": "toast-top-right",
-                            "timeOut": "5000",
-                            "closeButton": true,
-                            "progressBar": true
-                        });
-                        return; // Prevent form submission
-                    }
-                }
+                const normalPay = hoursWorked * ratePerHour;
+                const overtimePay = overtimeHours * overtimeRate;
+                const totalAmount = normalPay + overtimePay;
 
-                // Calculate total amount
-                var hoursWorked = parseFloat($('#hoursWorked').val()) || 0;
-                var ratePerHour = parseFloat($('#ratePerHour').val()) || 0;
-                var totalAmount = hoursWorked * ratePerHour;
+                $('#totalAmount').val(totalAmount.toFixed(2)); // Update total amount field
+            }
 
-                toastr.success('Total amount due: R' + totalAmount.toFixed(2), 'Amount Calculated', {
-                    "positionClass": "toast-top-right",
-                    "timeOut": "5000",
-                    "closeButton": true,
-                    "progressBar": true
-                });
-
-                setTimeout(function () {
-                    toastr.success('Claim has been submitted successfully!', 'Submission Successful', {
-                        "positionClass": "toast-top-right",
-                        "timeOut": "5000",
-                        "closeButton": true,
-                        "progressBar": true
-                    });
-
-                    setTimeout(function () {
-                        $('#claimForm')[0].submit(); //Submit the form
-                    }, 1000);
-                }, 1000);
+            // Bind calculations to input changes
+            $('#hoursWorked, #ratePerHour, #overtimeHours').on('input', function () {
+                calculateOvertimeRate();
+                calculateTotal();
             });
         });
     </script>

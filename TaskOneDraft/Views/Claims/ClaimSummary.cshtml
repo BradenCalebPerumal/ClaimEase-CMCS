@@ -13,7 +13,7 @@
         <div class="col-md-6">
             <p><strong>Hours Worked:</strong> @Model.HoursWorked</p>
             <p><strong>Rate per Hour:</strong> @Model.RateHour</p>
-            <p><strong>Total Amount:</strong> @Model.TotalAmount.ToString("C")</p>
+            <p><strong>Total Amount:</strong> @Model.TotalAmount.ToString("C", new System.Globalization.CultureInfo("en-ZA"))</p>
             <p><strong>Status:</strong> @Model.ClaimStatus</p>
             <p><strong>Date Submitted:</strong> @Model.DateSubmitted.ToShortDateString()</p>
         </div>

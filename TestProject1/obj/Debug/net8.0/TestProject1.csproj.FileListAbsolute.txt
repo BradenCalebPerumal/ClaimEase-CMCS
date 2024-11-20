@@ -1097,3 +1097,4 @@ C:\Users\Caleb\OneDrive - DLSSA\BCAD DEGREE\Year Two\Sem 2\PROG6212\Git Submissi
 C:\Users\Caleb\OneDrive - DLSSA\BCAD DEGREE\Year Two\Sem 2\PROG6212\Git Submissions\prog6212-poe-CalebPerumal28\TestProject1\obj\Debug\net8.0\TestProject1.pdb
 C:\Users\Caleb\OneDrive - DLSSA\BCAD DEGREE\Year Two\Sem 2\PROG6212\Git Submissions\prog6212-poe-CalebPerumal28\TestProject1\obj\Debug\net8.0\TestProject1.genruntimeconfig.cache
 C:\Users\Caleb\OneDrive - DLSSA\BCAD DEGREE\Year Two\Sem 2\PROG6212\Git Submissions\prog6212-poe-CalebPerumal28\TestProject1\obj\Debug\net8.0\ref\TestProject1.dll
+C:\Users\Caleb\OneDrive - DLSSA\BCAD DEGREE\Year Two\Sem 2\PROG6212\Git Submissions\prog6212-poe-CalebPerumal28\TestProject1\obj\Debug\net8.0\TestProject1.sourcelink.json
