@@ -227,11 +227,62 @@
 
                 $('#totalAmount').val(totalAmount.toFixed(2)); // Update total amount field
             }
+            
 
-            // Bind calculations to input changes
+            // Validate inputs
+            function validateInputs() {
+                let isValid = true;
+
+                // Validate negative numbers
+                $('.form-control').each(function () {
+                    const value = parseFloat($(this).val());
+                    if ($(this).attr('type') !== 'file' && value < 0) {
+                        alert('Negative numbers are not allowed.');
+                        $(this).val('');
+                        isValid = false;
+                        return false;
+                    }
+                });
+                $('#LecturerID').on('input', function () {
+                    const value = $(this).val();
+                    const numericValue = value.replace(/[^0-9]/g, ''); // Remove non-numeric characters
+                    if (value !== numericValue) {
+                        alert('Only numeric values are allowed in Lecturer ID.');
+                        $(this).val(numericValue);
+                    }
+                });
+                // Validate dates
+                const startDate = new Date($('#ClaimsPeriodStart').val());
+                const endDate = new Date($('#ClaimsPeriodEnd').val());
+
+                if (startDate && endDate && startDate > endDate) {
+                    alert('The start date cannot be later than the end date.');
+                    $('#ClaimsPeriodStart').val('');
+                    $('#ClaimsPeriodEnd').val('');
+                    isValid = false;
+                }
+
+                return isValid;
+            }
+
+            // Bind validations and calculations to input changes
             $('#hoursWorked, #ratePerHour, #overtimeHours').on('input', function () {
-                calculateOvertimeRate();
-                calculateTotal();
+                if (validateInputs()) {
+                    calculateOvertimeRate();
+                    calculateTotal();
+                }
+            });
+
+            // Validate dates on change
+            $('#ClaimsPeriodStart, #ClaimsPeriodEnd').on('change', function () {
+                validateInputs();
+            });
+
+            // Form submission validation
+            $('#claimForm').on('submit', function (event) {
+                if (!validateInputs()) {
+                    event.preventDefault(); // Prevent form submission
+                }
             });
         });
     </script>

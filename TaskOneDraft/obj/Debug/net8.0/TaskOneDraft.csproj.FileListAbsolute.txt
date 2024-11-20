@@ -2528,3 +2528,8 @@ C:\Users\Caleb\OneDrive - DLSSA\BCAD DEGREE\Year Two\Sem 2\PROG6212\Git Submissi
 C:\Users\Caleb\OneDrive - DLSSA\BCAD DEGREE\Year Two\Sem 2\PROG6212\Git Submissions\prog6212-poe-CalebPerumal28\TaskOneDraft\obj\Debug\net8.0\TaskOneDraft.genruntimeconfig.cache
 C:\Users\Caleb\OneDrive - DLSSA\BCAD DEGREE\Year Two\Sem 2\PROG6212\Git Submissions\prog6212-poe-CalebPerumal28\TaskOneDraft\obj\Debug\net8.0\ref\TaskOneDraft.dll
 C:\Users\Caleb\OneDrive - DLSSA\BCAD DEGREE\Year Two\Sem 2\PROG6212\Git Submissions\prog6212-poe-CalebPerumal28\TaskOneDraft\obj\Debug\net8.0\TaskOneDraft.sourcelink.json
+C:\Users\Caleb\OneDrive - DLSSA\BCAD DEGREE\Year Two\Sem 2\PROG6212\Git Submissions\prog6212-poe-CalebPerumal28\TaskOneDraft\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\Caleb\OneDrive - DLSSA\BCAD DEGREE\Year Two\Sem 2\PROG6212\Git Submissions\prog6212-poe-CalebPerumal28\TaskOneDraft\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\Caleb\OneDrive - DLSSA\BCAD DEGREE\Year Two\Sem 2\PROG6212\Git Submissions\prog6212-poe-CalebPerumal28\TaskOneDraft\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Caleb\OneDrive - DLSSA\BCAD DEGREE\Year Two\Sem 2\PROG6212\Git Submissions\prog6212-poe-CalebPerumal28\TaskOneDraft\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\Caleb\OneDrive - DLSSA\BCAD DEGREE\Year Two\Sem 2\PROG6212\Git Submissions\prog6212-poe-CalebPerumal28\TaskOneDraft\bin\Debug\net8.0\itextsharp.dll

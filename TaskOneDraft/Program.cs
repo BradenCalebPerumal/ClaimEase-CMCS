@@ -10,7 +10,8 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Globalization;
 using TaskOneDraft.Areas.Identity.Data;
-
+using FluentValidation;
+using FluentValidation.AspNetCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure services
@@ -24,7 +25,10 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.R
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
-builder.Services.AddControllersWithViews();
+
+// Add FluentValidation
+builder.Services.AddControllersWithViews()
+    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<ClaimsValidator>());
 builder.Services.AddRazorPages();
 
 // Add session services

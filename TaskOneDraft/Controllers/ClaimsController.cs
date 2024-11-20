@@ -1,8 +1,12 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.text.pdf.draw;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Drawing.Printing;
 using System.Security.Claims;
 using TaskOneDraft.Areas.Identity.Data;
 using TaskOneDraft.Models;
@@ -161,7 +165,10 @@ namespace TaskOneDraft.Controllers
         {
             return View(); //display faqs view
         }
-
+        public IActionResult GenerateReportt()
+        {
+            return View(); //display faqs view
+        }
         //[authorize(roles = "lecturer")]  ---if you want to restrict who can use it
         public async Task<IActionResult> List()
         {
@@ -190,12 +197,26 @@ public async Task<IActionResult> Claims(Claims claims, IFormFile supportingDocum
     Console.WriteLine($"Assigned UserID: {claims.UserID}"); // Log assigned userId
     ModelState.Remove("UserID");
     ModelState.Remove("Email");
-    claims.ClaimStatus = "Pending"; // Set claim status to "pending"
-    ModelState.Remove("ClaimStatus");
+ // Instantiate the validator
+    var validator = new ClaimsValidator();
+    var validationResult = validator.Validate(claims);
+            ModelState.Remove("ClaimStatus");
+            // Set the claim status based on validation
+            if (!validationResult.IsValid)
+    {
+        claims.ClaimStatus = "Rejected";
+        Console.WriteLine("Claim rejected due to rule violations.");
+    }
+    else
+    {
+        claims.ClaimStatus = "Pending";
+    }    
     ModelState.Remove("DateSubmitted");
-
-    // Handling the supporting document
-    if (supportingDocument != null && supportingDocument.Length > 0)
+            ModelState.Remove("RateHour");
+            ModelState.Remove("HoursWorked");
+            ModelState.Remove("OvertimeHours");
+            // Handling the supporting document
+            if (supportingDocument != null && supportingDocument.Length > 0)
     {
         using (var ms = new MemoryStream())
         {
@@ -332,7 +353,7 @@ public async Task<IActionResult> Claims(Claims claims, IFormFile supportingDocum
     }
     else
     {
-        Console.WriteLine("ModelState is invalid"); // Log invalid model state
+        Console.WriteLine("ModelState is invalidd"); // Log invalid model state
         foreach (var modelStateKey in ModelState.Keys)
         {
             var modelStateVal = ModelState[modelStateKey];
@@ -456,8 +477,280 @@ public async Task<IActionResult> Claims(Claims claims, IFormFile supportingDocum
         }
 
 
+        [HttpPost]
+        public IActionResult GenerateReportt(DateTime startDate, DateTime endDate)
+        {
+            // Fetch all claims within the date range
+            var claims = _context.Claims
+                .Where(c => c.DateSubmitted >= startDate && c.DateSubmitted <= endDate)
+                .ToList();
+
+            if (!claims.Any())
+            {
+                TempData["ErrorMessage"] = "No claims found within the specified date range.";
+                return RedirectToAction("ViewLecturers");
+            }
+
+            // Separate claims by status
+            var approvedClaims = claims.Where(c => c.ClaimStatus == "Approved").ToList();
+            var otherStatusClaims = claims.Where(c => c.ClaimStatus != "Approved").ToList();
+
+            // Generate PDF report
+            var pdfBytes = GeneratePdf(approvedClaims, otherStatusClaims, startDate, endDate);
+
+            // Return the PDF file
+            return File(pdfBytes, "application/pdf", $"ClaimReport_{startDate:yyyyMMdd}-{endDate:yyyyMMdd}.pdf");
+        }
+        private byte[] GeneratePdf(
+    IEnumerable<Claims> approvedClaims,
+    IEnumerable<Claims> otherStatusClaims,
+    DateTime startDate,
+    DateTime endDate)
+        {
+            // Calculate totals for approved claims
+            var totalGrossPay = approvedClaims.Sum(c => c.TotalAmount);
+            var totalTaxDeductions = approvedClaims.Sum(c => CalculateTax(c.TotalAmount));
+            var totalNetPay = totalGrossPay - totalTaxDeductions;
+            var totalOvertimeHours = approvedClaims.Sum(c => c.OvertimeHours ?? 0);
+            var totalHoursWorked = approvedClaims.Sum(c => c.HoursWorked);
+
+            using (var memoryStream = new MemoryStream())
+            {
+                var document = new Document(PageSize.A4, 40, 40, 40, 40); // Margins
+                var writer = PdfWriter.GetInstance(document, memoryStream);
+              
+
+                document.Open();
+                PdfContentByte cb = writer.DirectContent;
+                // Define the rectangle for the border
+                Rectangle pageBorder = new Rectangle(
+                    document.LeftMargin - 10,
+                    document.BottomMargin - 10,
+                    document.PageSize.Width - document.RightMargin + 10,
+                    document.PageSize.Height - document.TopMargin + 10
+                );
+
+                // Set the border style
+                pageBorder.BorderWidth = 3f; // Bold border
+                pageBorder.BorderColor = BaseColor.BLACK;
+                pageBorder.Border = Rectangle.BOX;
+
+                // Add the border to the page
+                cb.Rectangle(pageBorder);
+                // Create a table to hold the logo and header text side by side
+                var headerTable = new PdfPTable(2) { WidthPercentage = 100 };
+                headerTable.SetWidths(new float[] { 1f, 3f }); // Adjust column widths
+
+                // Add Logo Cell
+                string logoPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", "Logo1.png");
+               
+                    var logo = Image.GetInstance(logoPath);
+                    logo.ScaleToFit(43f, 43f); // Adjust size for better proportion
+                    logo.Alignment = Element.ALIGN_CENTER;
+
+                    var logoCell = new PdfPCell(logo)
+                    {
+                        Border = Rectangle.NO_BORDER,
+                        HorizontalAlignment = Element.ALIGN_CENTER,
+                        VerticalAlignment = Element.ALIGN_MIDDLE,
+                                            PaddingLeft = 120f // Add some padding for spacing
+
+                    };
+                    headerTable.AddCell(logoCell);
+               
+
+                // Add Company Name and Details with Styling
+                var headerFont = FontFactory.GetFont("Arial", 18, Font.BOLD, BaseColor.BLACK);
+                var detailsFont = FontFactory.GetFont("Arial", 10, Font.NORMAL, BaseColor.GRAY);
+
+                var headerText = new Paragraph();
+                headerText.Add(new Chunk("ClaimEase CMCS Pty(Ltd)\n", headerFont));
+                headerText.Add(new Chunk("Phone: 0861 555 181\n", detailsFont));
+                headerText.Add(new Chunk("Email: support@cmcs.com\n", detailsFont));
+                headerText.Add(new Chunk("Address: 138 Athens Street, Durban, South Africa", detailsFont));
+
+                var textCell = new PdfPCell(headerText)
+                {
+                    Border = Rectangle.NO_BORDER,
+                    HorizontalAlignment = Element.ALIGN_LEFT,
+                    VerticalAlignment = Element.ALIGN_MIDDLE,
+                    PaddingLeft = 50f // Add some padding for spacing
+                };
+                headerTable.AddCell(textCell);
+
+                // Add the header table to the document
+                document.Add(headerTable);
+
+                // Add a line separator below the header for a cleaner look
+                var separator = new LineSeparator(1f, 100f, BaseColor.LIGHT_GRAY, Element.ALIGN_CENTER, -2);
+                document.Add(separator);
+
+                // Add some spacing below the header
+
+                // Add Main Title
+                var mainTitleFont = FontFactory.GetFont("Arial", 22, Font.BOLD, BaseColor.BLACK);
+                document.Add(new Paragraph("Claim Report", mainTitleFont));
+              
+                // Add Date Range Subheading
+                var subHeaderFont = FontFactory.GetFont("Arial", 12, Font.ITALIC, BaseColor.DARK_GRAY);
+                document.Add(new Paragraph($"Date Range: {startDate:yyyy-MM-dd} to {endDate:yyyy-MM-dd}", subHeaderFont));
+
+                // Add another space for separation
+                document.Add(new Paragraph(" "));
+
+                var separatorr = new LineSeparator(1f, 100f, BaseColor.LIGHT_GRAY, Element.ALIGN_CENTER, -2);
+                document.Add(separator);
+
+                // Add Table for Claims with Other Statuses
+                if (otherStatusClaims.Any())
+                {
+                    var otherClaimsTitleFont = FontFactory.GetFont("Arial", 16, Font.BOLD, BaseColor.RED);
+                    document.Add(new Paragraph("Unapproved Claims", otherClaimsTitleFont));
+                    document.Add(new Paragraph(" "));
+
+                    var otherStatusTable = new PdfPTable(5) { WidthPercentage = 100 };
+                    otherStatusTable.SpacingBefore = 10f;
+                    otherStatusTable.SpacingAfter = 10f;
+
+                    // Table Header
+                    AddTableHeader(otherStatusTable, new[] { "Claim ID", "Lecturer ID", "Status", "Gross Pay (R)", "Date Submitted" });
+
+                    if (otherStatusClaims.Any())
+                    {
+                        foreach (var claim in otherStatusClaims)
+                        {
+                            otherStatusTable.AddCell(claim.ID.ToString());
+                            otherStatusTable.AddCell(claim.LecturerID);
+                            otherStatusTable.AddCell(claim.ClaimStatus);
+                            otherStatusTable.AddCell(claim.TotalAmount.ToString("F2"));
+                            otherStatusTable.AddCell(claim.DateSubmitted.ToString("yyyy-MM-dd"));
+                        }
+                    }
+                    else
+                    {
+                        var noClaimsCell = new PdfPCell(new Phrase("No Unapproved Claims", FontFactory.GetFont("Arial", 12, Font.NORMAL, BaseColor.GRAY)))
+                        {
+                            Colspan = 5,
+                            HorizontalAlignment = Element.ALIGN_CENTER
+                        };
+                        otherStatusTable.AddCell(noClaimsCell);
+                    }
+
+
+                    document.Add(otherStatusTable);
+                }
+
+                // Add Table for Approved Claims
+                var approvedClaimsTitleFont = FontFactory.GetFont("Arial", 16, Font.BOLD, BaseColor.GREEN);
+                document.Add(new Paragraph("Approved Claims", approvedClaimsTitleFont));
+                document.Add(new Paragraph(" "));
+
+                var approvedTable = new PdfPTable(6) { WidthPercentage = 100 };
+                approvedTable.SpacingBefore = 10f;
+                approvedTable.SpacingAfter = 10f;
+
+                // Table Header
+                AddTableHeader(approvedTable, new[] { "Claim ID", "Lecturer ID", "Hours Worked", "Overtime Hours", "Gross Pay (R)", "Net Pay (R)" });
+
+                if (approvedClaims.Any())
+                {
+                    foreach (var claim in approvedClaims)
+                    {
+                        approvedTable.AddCell(claim.ID.ToString());
+                        approvedTable.AddCell(claim.LecturerID);
+                        approvedTable.AddCell(claim.HoursWorked.ToString("F2"));
+                        approvedTable.AddCell((claim.OvertimeHours ?? 0).ToString("F2"));
+                        approvedTable.AddCell(claim.TotalAmount.ToString("F2"));
+                        approvedTable.AddCell((claim.TotalAmount - CalculateTax(claim.TotalAmount)).ToString("F2"));
+                    }
+                }
+                else
+                {
+                    var noClaimsCell = new PdfPCell(new Phrase("No Approved Claims", FontFactory.GetFont("Arial", 12, Font.NORMAL, BaseColor.GRAY)))
+                    {
+                        Colspan = 6,
+                        HorizontalAlignment = Element.ALIGN_CENTER
+                    };
+                    approvedTable.AddCell(noClaimsCell);
+                }
+
+                document.Add(approvedTable);
+
+                // Add Summary Table for Approved Claims
+                document.Add(new Paragraph(" "));
+                var summaryTitleFont = FontFactory.GetFont("Arial", 16, Font.BOLD, BaseColor.DARK_GRAY);
+                document.Add(new Paragraph("Summary for Approved Claims", summaryTitleFont));
+                document.Add(new Paragraph(" "));
+
+                var summaryTable = new PdfPTable(2) { WidthPercentage = 50, HorizontalAlignment = Element.ALIGN_LEFT };
+                summaryTable.SpacingBefore = 10f;
+                summaryTable.SpacingAfter = 10f;
+
+                // Add Header Row
+                AddTableHeader(summaryTable, new[] { "Description", "Value" });
+
+                // Add Data Rows
+                summaryTable.AddCell("Total Hours Worked");
+                summaryTable.AddCell($"{totalHoursWorked:F2}");
+
+                summaryTable.AddCell("Total Overtime Hours");
+                summaryTable.AddCell($"{totalOvertimeHours:F2}");
+
+                summaryTable.AddCell("Total Gross Pay");
+                summaryTable.AddCell($"R{totalGrossPay:F2}");
+
+                summaryTable.AddCell("Total Tax Deductions");
+                summaryTable.AddCell($"R{totalTaxDeductions:F2}");
+
+                summaryTable.AddCell("Total Net Pay");
+                summaryTable.AddCell($"R{totalNetPay:F2}");
+
+                document.Add(summaryTable);
+
+                document.Close();
+                return memoryStream.ToArray();
+            }
+        }
+
+        private void AddTableHeader(PdfPTable table, string[] headers)
+        {
+            foreach (var header in headers)
+            {
+                var cell = new PdfPCell(new Phrase(header, FontFactory.GetFont("Arial", 12, Font.BOLD, BaseColor.WHITE)))
+                {
+                    BackgroundColor = BaseColor.DARK_GRAY,
+                    HorizontalAlignment = Element.ALIGN_CENTER
+                };
+                table.AddCell(cell);
+            }
+        }
+
+        private double CalculateTax(double taxableIncome)
+        {
+            if (taxableIncome <= 237100)
+                return taxableIncome * 0.18;
+            else if (taxableIncome <= 370500)
+                return 42678 + (taxableIncome - 237100) * 0.26;
+            else if (taxableIncome <= 512800)
+                return 77362 + (taxableIncome - 370500) * 0.31;
+            else if (taxableIncome <= 673000)
+                return 121475 + (taxableIncome - 512800) * 0.36;
+            else if (taxableIncome <= 857900)
+                return 179147 + (taxableIncome - 673000) * 0.39;
+            else if (taxableIncome <= 1817000)
+                return 251258 + (taxableIncome - 857900) * 0.41;
+            else
+                return 644489 + (taxableIncome - 1817000) * 0.45;
+        }
+        [HttpGet]
+        public IActionResult GenerateReportForm(string lecturerId)
+        {
+            ViewBag.LecturerId = lecturerId;
+            return View();
+        }
+
     }
 }
 
 
-///done part 2
+///done part 3

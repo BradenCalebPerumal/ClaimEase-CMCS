@@ -109,6 +109,8 @@
                 </div>
                 <div class="card-title">Lecturer ID: @lecturer.Id</div>
                 <div class="card-email">Email: @lecturer.Email</div>
+                <a asp-action="GenerateReportForm" asp-route-lecturerId="@lecturer.Id" class="btn btn-primary">Generate Report</a>
+
             </div>
         }
     </div>
