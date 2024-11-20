@@ -1,0 +1,86 @@
+﻿@page
+@model PersonalDataModel
+@{
+    ViewData["Title"] = "Personal Data";
+    ViewData["ActivePage"] = ManageNavPages.PersonalData;
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<style>
+    .personal-data-container {
+        margin-bottom: 50px;
+    }
+
+    .personal-data-title {
+        color: black;
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-shadow: 0 0 10px #00ffcc;
+    }
+
+    .btn-primary, .btn-danger {
+        border: none;
+        padding: 10px 20px;
+        width: 100%;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: black;
+    }
+
+    .btn-primary {
+        background-color: #00ffcc; /* Neon blue for primary actions */
+        margin: 5px 0;
+    }
+
+    .btn-primary:hover {
+        background-color: blue;
+        box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+    }
+
+    .btn-danger {
+        background-color: Red; /* Bright red for danger actions */
+        margin: 5px 0;
+        color: white;
+    }
+
+    .btn-danger:hover {
+        background-color: #cc0000;
+        box-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff4d4d, 0 0 30px #ff4d4d;
+    }
+
+    .warning-text {
+        color: #ff4d4d;
+        font-weight: bold;
+        text-shadow: 0 0 5px #ff4d4d;
+    }
+
+    p {
+        color: black;
+        text-shadow: 0 0 5px #00ffcc;
+    }
+</style>
+
+<div class="personal-data-container">
+    <h3 class="personal-data-title">@ViewData["Title"]</h3>
+
+    <div class="row">
+        <div class="col-md-6">
+            <p>Your account contains personal data that you have given us. This page allows you to download or delete that data.</p>
+            <p class="warning-text">
+                <strong>Deleting this data will permanently remove your account, and this cannot be recovered.</strong>
+            </p>
+            <form id="download-data" asp-page="DownloadPersonalData" method="post">
+                <button class="btn btn-primary glowing-element" type="submit">Download</button>
+            </form>
+            <p>
+                <a id="delete" asp-page="DeletePersonalData" class="btn btn-danger ">Delete</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

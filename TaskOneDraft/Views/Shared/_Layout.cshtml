@@ -1,0 +1,248 @@
+﻿@using System.Security.Claims
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TaskOneDraft</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TaskOneDraft.styles.css" asp-append-version="true" />
+    <link rel="cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link href="~/bootstrap.min.css" rel="stylesheet" />
+
+
+</head>
+
+<style>
+   
+ .navbar .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .navbar .dropdown-menu {
+        margin-top: 0;
+    }
+
+    .navbar {
+        background-color: black; /* Charcoal gray for a sleek look */
+        color: white; /* White text for contrast */
+        height: 80px; /* Increase the height for a thicker navbar */
+        padding: 10px 15px; /* Adjust padding to vertically center the content */
+        text-align:left;
+    }
+
+        .navbar a {
+            color: white; /* Set text color */
+            text-shadow: 0 0 7px #00FFFF; /* Green glow */
+        }
+
+            /* For a stronger or different colored glow, adjust the color and the blur radius */
+            .navbar a:hover {
+                color: white; /* Keep the text color white when hovering */
+                text-shadow: 0 0 10px #007bff; /* Red glow on hover */
+            }
+
+        .navbar .nav-link {
+            color: white !important; /* Set text color to white */
+            text-shadow: 0 0 7px #00FFFF; /* Green glow for the text */
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+            .navbar .nav-link:hover {
+                color: white !important; /* Keep the text color white when hovering */
+                text-shadow: 0 0 10px #007bff; /* Blue glow on hover */
+            }
+    /* Navbar brand glow */
+    .navbar-brand {
+        color: white !important; /* Important to override any other styles */
+        text-shadow: 0 0 8px #007bff; /* Blue glow */
+    }
+
+        /* Ensures the dropdown and its items are always visible with proper contrast */
+        .navbar .dropdown-menu {
+            background-color: #333; /* Darker background for dropdown */
+            color: white; /* White text for contrast */
+            border: none; /* Clean look without border */
+        }
+
+        /* Ensure dropdown items are visible and have a hover effect */
+        .navbar .dropdown-item {
+            color: #ccc; /* Light grey text for visibility */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        }
+
+            .navbar .dropdown-item:hover {
+                background-color: #2a2a2a; /* Slightly lighter grey background on hover */
+            }
+ 
+    .navbar-icon {
+        transition: filter 0.3s ease; /* Smooth filter transition */
+    }
+
+    .social-icon i {
+        font-size: 24px; /* Adjust size as needed */
+        color: black; /* Set color to ensure it stands out */
+        margin-right: 10px; /* Space between icons */
+        transition: color 0.3s ease; /* Smooth hover transition */
+    }
+
+        .social-icon i:hover {
+            color: #00ced1; /* Change color on hover for visibility */
+        }
+
+      
+      p {
+        color: black;
+        text-shadow: 0 0 5px #00ffcc;
+    }
+
+    #facebook-icon {
+        background-image: url('~/images/facebook.png');
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        background-size: cover;
+    }
+
+    #instagram-icon {
+        background-image: url('~/images/instagram.png');
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        background-size: cover;
+    }
+
+    #twitter-icon {
+        background-image: url('~/images/twitter.png');
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        background-size: cover;
+    }
+
+   
+</style>
+<body>
+
+  @*   <script src="cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> *@
+    
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow mb-3 navbar-custom">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <img src="~/images/Logo1.png" alt="Icon Logo" class="navbar-icon" style="width: 40px; height: auto; margin-right: 10px;">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ClaimEase CMCS</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                    <ul class="navbar-nav flex-grow-1 justify-content-end">
+                        @if (User.Identity.IsAuthenticated && !User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Claims" asp-action="Dashboard">Dashboard</a>
+                            </li>
+                        }
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Claims" asp-action="AdminDashboard">Dashboard</a>
+                            </li>
+                        }
+                        @if (User.Identity.IsAuthenticated == false)
+                        {
+                             <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="loginDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Login
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="loginDropdown">
+                                <li>
+                                    <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Login" asp-route-role="Lecturer">Lecturer</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Login" asp-route-role="Admin">Admin</a>
+                                </li>
+                              
+                            </ul>
+                        </li>
+                        }
+
+                   
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="TermsOfUse">Terms Of Use</a>
+                        </li>
+
+                     
+
+                      
+                    </ul>
+                    
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="border-top footer text-muted" style="background-color: #81cdc6 ; padding: 0px 0; text-align: center; box-sizing: border-box; color: black;">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-3 text-center" style="margin-bottom: 5px;">
+                    <p style="margin: 0; line-height: 1.2; font-weight: bold; color: black; text-shadow: 0 0 5px #00ffcc;">
+                        &copy; 2024 - ClaimEase CMCS<br />
+                        Version 1.0.0<br />
+                        All Rights Reserved.
+                    </p>
+                </div>
+                <div class="col-md-3 text-center" style="margin-bottom: 5px;">
+                    <h6 style="margin: 0; margin-bottom: 3px; font-weight: bold; color: black; text-shadow: 0 0 5px #00ffcc;">Contact Us</h6>
+                    <p style="margin: 0; line-height: 1.2; color: black; text-shadow: 0 0 5px #00ffcc;">
+                        Phone: 0861 555 181<br />
+                        Email: <a href="mailto:support@cmcs.com" style="color: midnightblue; text-shadow: none;"> support@cmcs.com</a>
+                    </p>
+                </div>
+                <div class="col-md-3 text-center" style="margin-bottom: 5px;">
+                    <h6 style="margin: 0; margin-bottom: 3px; font-weight: bold; color: black; text-shadow: 0 0 5px #00ffcc;">Quick Links</h6>
+                    <ul class="list-unstyled" style="padding: 0; margin: 0; line-height: 1.2;">
+                        <li style="margin-bottom: 3px;">
+                            <a href="@Url.Action("ContactUs", "Home")" style="color: midnightblue; text-shadow: none;">Get In Touch</a>
+                        </li>
+                        <li style="margin-bottom: 3px;">
+                            <a href="@Url.Action("Privacy", "Home")" style="color: midnightblue; text-shadow: none;">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 text-center">
+                    <h6 style="margin: 0; margin-bottom: 3px; font-weight: bold; color: black; text-shadow: 0 0 5px #00ffcc;">Follow Us On</h6>
+                    <div class="social-icons" style="padding-top: 5px;">
+                        <a href="https://www.facebook.com" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.twitter.com" class="social-icon"><i class="fab fa-twitter"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

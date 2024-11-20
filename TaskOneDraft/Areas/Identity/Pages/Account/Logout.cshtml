@@ -1,0 +1,79 @@
+﻿@page
+@model LogoutModel
+@{
+    ViewData["Title"] = "Log out";
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<style>
+    .logout-container {
+        padding: 20px;
+        margin: 50px auto;
+        max-width: 600px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 255, 255, 0.2);
+        border: 1px solid black;
+     
+        text-align: center;
+    }
+
+    h1 {
+        color: black;
+        text-shadow: 0 0 10px #00ffcc;
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    .logout-message {
+        color: black;
+        font-size: 18px;
+        text-shadow: 0 0 5px #00ffcc;
+        margin-top: 10px;
+    }
+
+    .btn-logout {
+        background-color: #00ffcc;
+        border: none;
+        padding: 10px 20px;
+        color: black;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn-logout:hover {
+        background-color: blue;
+        box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+        color: black;
+    }
+
+  glow {
+        0% {
+            box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc;
+        }
+        100% {
+            box-shadow: 0 0 20px #007bff, 0 0 30px #007bff, 0 0 40px #007bff, 0 0 50px #007bff;
+        }
+    }
+</style>
+
+<div class="logout-container">
+    <h1>@ViewData["Title"]</h1>
+    @if (User.Identity?.IsAuthenticated ?? false)
+    {
+        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+            <button type="submit" class="btn-logout">Click here to confirm Logout</button>
+        </form>
+    }
+    else
+    {
+        <p class="logout-message">You have successfully logged out of the application.</p>
+    }
+</div>

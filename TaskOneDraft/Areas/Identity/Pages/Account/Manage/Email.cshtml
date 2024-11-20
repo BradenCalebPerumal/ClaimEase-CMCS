@@ -1,0 +1,101 @@
+﻿@page
+@model EmailModel
+@{
+    ViewData["Title"] = "Manage Email";
+    ViewData["ActivePage"] = ManageNavPages.Email;
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<style>
+    .manage-email-container {
+        margin-bottom: 50px;
+    }
+
+    .manage-email-title {
+        color: black;
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-shadow: 0 0 10px #00ffcc;
+    }
+
+    .form-floating label {
+        color: black;
+        text-shadow: 0 0 5px #00ffcc;
+    }
+
+    .form-control {
+        padding: 10px;
+        border: 2px solid #00ffcc; /* Neon border */
+        border-radius: 4px;
+        background-color: transparent;
+        color: black;
+        transition: border 0.3s;
+    }
+
+        .form-control:focus {
+            border-color: #1affff; /* Lighter neon on focus */
+            outline: none;
+            box-shadow: 0 0 8px #00ffcc;
+        }
+
+    
+
+        .btn-primary:active, .btn-link:active {
+            transform: translateY(2px);
+        }
+
+    .text-danger {
+        color: #ff4d4d; /* Bright red for error messages */
+        font-weight: bold;
+    }
+
+    .input-group-append .input-group-text {
+        border: 2px solid #00ffcc;
+        border-radius: 4px;
+        background-color: transparent;
+        color: green;
+        font-weight: bold;
+        text-shadow: 0 0 5px #00ffcc;
+    }
+</style>
+
+<div class="manage-email-container">
+    <h3 class="manage-email-title">@ViewData["Title"]</h3>
+    <partial name="_StatusMessage" for="StatusMessage" />
+    <div class="row">
+        <div class="col-md-6">
+            <form id="email-form" method="post">
+                <div asp-validation-summary="All" class="text-danger" role="alert"></div>
+                @if (Model.IsEmailConfirmed)
+                {
+                    <div class="form-floating mb-3 input-group">
+                        <input asp-for="Email" class="form-control" placeholder="Please enter your email." disabled />
+                        <div class="input-group-append">
+                            <span class="h-100 input-group-text text-success font-weight-bold">✓</span>
+                        </div>
+                        <label asp-for="Email" class="form-label">Email</label>
+                    </div>
+                }
+                else
+                {
+                    <div class="form-floating mb-3">
+                        <input asp-for="Email" class="form-control" placeholder="Please enter your email." disabled />
+                        <label asp-for="Email" class="form-label">Email</label>
+                        <button id="email-verification" type="submit" asp-page-handler="SendVerificationEmail" class="btn btn-link glowing-element">Send verification email</button>
+                    </div>
+                }
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.NewEmail" class="form-control" autocomplete="email" aria-required="true" placeholder="Please enter new email." />
+                    <label asp-for="Input.NewEmail" class="form-label">New Email</label>
+                    <span asp-validation-for="Input.NewEmail" class="text-danger"></span>
+                </div>
+                <button id="change-email-button" type="submit" asp-page-handler="ChangeEmail" class="btn btn-primary glowing-element">Change email</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

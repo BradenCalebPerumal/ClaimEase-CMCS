@@ -1,0 +1,120 @@
+﻿@page
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<style>
+    .faq-container {
+        padding: 20px;
+    
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 255, 255, 0.2);
+        border: 1px solid black;
+       margin-bottom:100px;
+    }
+
+    h2 {
+        color: black;
+        text-shadow: 0 0 10px #00ffcc;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .question {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
+        color: #1a1a1a;
+        text-shadow: 0 0 5px #00ffcc;
+    }
+
+    .answer {
+        font-size: 16px;
+        color: black;
+        margin-top: 10px;
+        background: rgba(240, 248, 255, 0.9); /* Light blueish background */
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(0, 255, 255, 0.1);
+    }
+
+    .btn-back {
+        background-color: #00ffcc;
+        border: none;
+        padding: 10px 20px;
+        color: black;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 20px;
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        transition: all 0.3s ease;
+    }
+
+    .btn-back:hover {
+        background-color: blue;
+        box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+        color: black;
+    }
+
+ glow {
+        0% {
+            box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc;
+        }
+        100% {
+            box-shadow: 0 0 20px #007bff, 0 0 30px #007bff, 0 0 40px #007bff, 0 0 50px #007bff;
+        }
+    }
+</style>
+
+<div class="faq-container">
+    <h2>Frequently Asked Questions - Claim Submission</h2>
+
+    <div>
+        <div class="question">1. How do I submit a claim?</div>
+        <div class="answer">
+            To submit a claim, go to the "Submit Claims" tab on your dashboard. Fill in the required information, including the claim period, hours worked, rate per hour, and a description of the work performed. Upload any supporting documents and click "Submit."
+        </div>
+    </div>
+
+    <div>
+        <div class="question">2. What information is required to submit a claim?</div>
+        <div class="answer">
+            You need to provide your Lecturer ID, first name, last name, claim period start and end dates, hours worked, rate per hour, and a description of the work. You also need to upload any supporting documents related to the claim.
+        </div>
+    </div>
+
+    <div>
+        <div class="question">3. How can I view the status of my claim?</div>
+        <div class="answer">
+            You can view the status of your submitted claims by navigating to the "View Claim Status" tab on your dashboard. The status will be displayed as "Pending," "Processed," or "Approved."
+        </div>
+    </div>
+
+    <div>
+        <div class="question">4. What should I do if my claim status is pending for a long time?</div>
+        <div class="answer">
+            If your claim status remains "Pending" for an extended period, please contact the admin or Programme Coordinator for further assistance. They will be able to provide updates or resolve any issues with your submission.
+        </div>
+    </div>
+
+    <div>
+        <div class="question">5. Can I edit or cancel a submitted claim?</div>
+        <div class="answer">
+            Once a claim is submitted, it cannot be edited directly. If you need to make changes, contact the admin to discuss your options. Cancellations or adjustments will depend on the status of your claim.
+        </div>
+    </div>
+
+    <div>
+        <div class="question">6. How do I upload supporting documents?</div>
+        <div class="answer">
+            During the claim submission process, you will see an option to upload files. Click on "Choose File," select the relevant document from your device, and it will be uploaded with your claim. Ensure the documents are clear and relevant to your claim.
+        </div>
+    </div>
+
+    <a href="javascript:history.back()" class="btn-back">Go Back</a>
+</div>

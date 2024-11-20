@@ -1,0 +1,218 @@
+﻿@model IEnumerable<TaskOneDraft.Models.Claims>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+        background-color: #f0f8ff;
+    }
+
+    .table-container {
+        display: flex;
+        justify-content: center; /* Centers the table horizontally */
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom:100px;
+    }
+
+    .scrollable-table {
+        max-height: 700px; /* Limits the height of the table */
+        overflow-y: auto; /* Adds vertical scrolling if content exceeds height */
+        width: 100%; /* Adjust this as needed for the desired table width */
+        box-shadow: 0 4px 8px rgba(0, 128, 128, 0.5);
+    }
+
+    .table {
+        width: 100%;
+        table-layout: auto;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+        .table thead th {
+            background-color: #00ffcc;
+            color: black;
+            text-align: center;
+            padding: 12px;
+            white-space: nowrap;
+            border-bottom: 2px solid #008b8b;
+            box-shadow: 0 4px 10px rgba(0, 255, 255, 0.5);
+            position: sticky; /* Makes the header sticky */
+            top: 0;
+        }
+
+        .table tbody td {
+            background-color: rgba(0, 255, 255, 0.1);
+            color: black;
+            text-align: center;
+            padding: 10px;
+            white-space: nowrap;
+            vertical-align: middle;
+            border-bottom: 1px solid #00ced1;
+        }
+
+    h2 {
+        color: #1a1a1a;
+        text-shadow: 0 0 5px #00ffcc;
+        margin-bottom: 20px;
+        font-size: 30px;
+        text-align: left;
+    }
+
+    .search-container {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .search-input {
+        border: 2px solid #00ced1;
+        border-radius: 4px;
+        padding: 5px 10px;
+        margin-right: 10px;
+        background-color: #f0f8ff;
+        color: black;
+        transition: border 0.3s;
+    }
+
+        .search-input:focus {
+            border-color: #00ffcc;
+            outline: none;
+            box-shadow: 0 0 8px #00ffcc;
+        }
+
+    .btn-reset {
+        background-color: #ff6347;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 25px;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(255, 99, 71, 0.5);
+    }
+
+        .btn-reset:hover {
+            background-color: #d9534f;
+        }
+
+    .btn-primary {
+        background-color: #00ced1;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        box-shadow: 0 4px 10px rgba(0, 206, 209, 0.5);
+    }
+
+        .btn-primary:hover {
+            background-color: #008b8b;
+            color: black;
+        }
+
+    .alert-warning {
+        background-color: #fff3cd;
+        color: #856404;
+        text-align: center;
+        margin: 20px 0;
+    }
+</style>
+
+<h2>Claim History</h2>
+
+<div class="search-container">
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" class="search-input">
+
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" class="search-input">
+
+    <button id="resetButton" class="btn-reset">Reset</button>
+</div>
+
+@if (Model.Any())
+{
+    <div class="table-container">
+        <div class="scrollable-table">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Claim ID</th>
+                        <th>Claim Period Start</th>
+                        <th>Claim Period End</th>
+                        <th>Total Amount</th>
+                        <th>Description</th>
+                        <th>Date Submitted</th>
+                        <th>Files</th>
+                    </tr>
+                </thead>
+                <tbody id="claimsTableBody">
+                    @foreach (var claim in Model)
+                    {
+                        <tr class="claim-row">
+                            <td>@claim.ID</td>
+                            <td>@claim.ClaimsPeriodStart.ToString("yyyy-MM-dd")</td>
+                            <td>@claim.ClaimsPeriodEnd.ToString("yyyy-MM-dd")</td>
+                            <td>@claim.TotalAmount.ToString("C")</td>
+                            <td>@claim.DescriptionOfWork</td>
+                            <td>@claim.DateSubmitted.ToString("yyyy-MM-dd")</td>
+                            <td>
+                                @if (claim.File.Any())
+                                {
+                                    <ul>
+                                        @foreach (var file in claim.File)
+                                        {
+                                            <li>
+                                                <span>@file.FileName</span>
+                                                <a href="@Url.Action("DownloadFile", "Claims", new { id = file.FileId })" class="btn btn-primary btn-sm">
+                                                    Download
+                                                </a>
+                                            </li>
+                                        }
+                                    </ul>
+                                }
+                                else
+                                {
+                                    <p>No files attached</p>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+else
+{
+    <p class="alert alert-warning">No claims found.</p>
+}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Filter table rows based on date range input
+        $('#startDate, #endDate').on('change', function () {
+            var startDate = new Date($('#startDate').val());
+            var endDate = new Date($('#endDate').val());
+
+            // Only filter if both dates are selected
+            if (!isNaN(startDate.getTime()) && !isNaN(endDate.getTime())) {
+                $('#claimsTableBody tr').filter(function () {
+                    var claimDate = new Date($(this).find('td:eq(1)').text());
+                    $(this).toggle(claimDate >= startDate && claimDate <= endDate);
+                });
+            }
+        });
+
+        // Reset button functionality
+        $('#resetButton').click(function () {
+            // Clear the date inputs
+            $('#startDate').val('');
+            $('#endDate').val('');
+
+            // Show all table rows
+            $('#claimsTableBody tr').show();
+        });
+    });
+</script>

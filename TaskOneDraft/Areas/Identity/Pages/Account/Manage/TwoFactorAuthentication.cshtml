@@ -1,0 +1,113 @@
+﻿@page
+@using Microsoft.AspNetCore.Http.Features
+@model TwoFactorAuthenticationModel
+@{
+    ViewData["Title"] = "Two-factor authentication (2FA)";
+    ViewData["ActivePage"] = ManageNavPages.TwoFactorAuthentication;
+}
+
+<partial name="_StatusMessage" for="StatusMessage" />
+
+<h3 class="page-title">@ViewData["Title"]</h3>
+
+@{
+    var consentFeature = HttpContext.Features.Get<ITrackingConsentFeature>();
+    @if (consentFeature?.CanTrack ?? true)
+    {
+        @if (Model.Is2faEnabled)
+        {
+            if (Model.RecoveryCodesLeft == 0)
+            {
+                <div class="alert alert-danger glow-alert">
+                    <strong>You have no recovery codes left.</strong>
+                    <p>You must <a asp-page="./GenerateRecoveryCodes" class="glow-link">generate a new set of recovery codes</a> before you can log in with a recovery code.</p>
+                </div>
+            }
+            else if (Model.RecoveryCodesLeft == 1)
+            {
+                <div class="alert alert-danger glow-alert">
+                    <strong>You have 1 recovery code left.</strong>
+                    <p>You can <a asp-page="./GenerateRecoveryCodes" class="glow-link">generate a new set of recovery codes</a>.</p>
+                </div>
+            }
+            else if (Model.RecoveryCodesLeft <= 3)
+            {
+                <div class="alert alert-warning glow-alert">
+                    <strong>You have @Model.RecoveryCodesLeft recovery codes left.</strong>
+                    <p>You should <a asp-page="./GenerateRecoveryCodes" class="glow-link">generate a new set of recovery codes</a>.</p>
+                </div>
+            }
+
+            if (Model.IsMachineRemembered)
+            {
+                <form method="post" style="display: inline-block">
+                    <button type="submit" class="btn btn-primary glowing-element">Forget this browser</button>
+                </form>
+            }
+            <a asp-page="./Disable2fa" class="btn btn-primary glowing-element">Disable 2FA</a>
+            <a asp-page="./GenerateRecoveryCodes" class="btn btn-primary glowing-element">Reset recovery codes</a>
+        }
+
+        <h4>Authenticator app</h4>
+        @if (!Model.HasAuthenticator)
+        {
+            <a id="enable-authenticator" asp-page="./EnableAuthenticator" class="btn btn-primary glowing-element">Add authenticator app</a>
+        }
+        else
+        {
+            <a id="enable-authenticator" asp-page="./EnableAuthenticator" class="btn btn-primary glowing-element">Set up authenticator app</a>
+            <a id="reset-authenticator" asp-page="./ResetAuthenticator" class="btn btn-primary ">Reset authenticator app</a>
+        }
+    }
+    else
+    {
+        <div class="alert alert-danger glow-alert">
+            <strong>Privacy and cookie policy have not been accepted.</strong>
+            <p>You must accept the policy before you can enable two-factor authentication.</p>
+        </div>
+    }
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+<style>
+    .page-title {
+        color: black;
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-shadow: 0 0 10px #00ffcc;
+    }
+
+    .btn-primary {
+        background-color: Red;
+        border: none;
+        padding: 10px 20px;
+        color: black;
+        width: auto;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+        .btn-primary:hover {
+            background-color: blue;
+            box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+        }
+
+    .glow-alert {
+        background-color: #e0f7fa;
+        border: 1px solid #00ffcc;
+        border-radius: 4px;
+        color: black;
+        padding: 15px;
+        text-shadow: 0 0 5px #00ffcc;
+    }
+
+    .glow-link {
+        color: blue;
+        text-shadow: 0 0 5px #00ffcc;
+    }
+</style>

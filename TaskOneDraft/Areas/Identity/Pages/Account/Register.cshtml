@@ -1,0 +1,136 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<style>
+    .register-container {
+      margin-bottom:50px;
+    }
+
+    .register-title {
+        color: black;
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-shadow: 0 0 10px #00ffcc;
+    }
+
+    .form-floating label {
+        color: black;
+        text-shadow: 0 0 5px #00ffcc;
+    }
+
+    .form-control {
+        padding: 10px;
+        border: 2px solid #00ffcc; /* Neon border */
+        border-radius: 4px;
+        background-color: transparent;
+        color: black;
+        transition: border 0.3s;
+    }
+
+    .form-control:focus {
+        border-color: #1affff; /* Lighter neon on focus */
+        outline: none;
+        box-shadow: 0 0 8px #00ffcc;
+    }
+
+    .btn-primary {
+        background-color: #00ffcc;
+        border: none;
+        padding: 10px 20px;
+        color: black;
+        width: 100%;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: blue;
+        box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+    }
+
+    .btn-primary:active {
+        transform: translateY(2px);
+    }
+
+    /* Glow animation */
+glow {
+        0% {
+            box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc;
+            background-color: #00ffcc;
+            opacity: 0.8;
+        }
+
+        50% {
+            box-shadow: 0 0 20px #007bff, 0 0 30px #007bff, 0 0 40px #007bff, 0 0 50px #007bff;
+            background-color: #007bff;
+            opacity: 1;
+        }
+
+        100% {
+            box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc;
+            background-color: #00ffcc;
+            opacity: 0.8;
+        }
+    }
+
+    .glowing-element {
+        animation: glow 3s infinite;
+    }
+</style>
+
+<div class="register-container">
+    <h2 class="register-title">Create a New Account</h2>
+
+    <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+        <div class="form-floating mb-3">
+            <input asp-for="Input.Email" class="form-control shaking-element" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+            <label asp-for="Input.Email">Email</label>
+            <span asp-validation-for="Input.Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input asp-for="Input.Password" class="form-control shaking-element" autocomplete="new-password" aria-required="true" placeholder="password" />
+            <label asp-for="Input.Password">Password</label>
+            <span asp-validation-for="Input.Password" class="text-danger"></span>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input asp-for="Input.ConfirmPassword" class="form-control shaking-element" autocomplete="new-password" aria-required="true" placeholder="password" />
+            <label asp-for="Input.ConfirmPassword">Confirm Password</label>
+            <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+        </div>
+
+        <button id="registerSubmit" type="submit" class="btn btn-primary animated-button">Register</button>
+    </form>
+</div>
+
+
+<!-- Loading overlay -->
+<div id="loadingOverlay" class="loading-overlay" style="display:none;">
+    <div class="loader"></div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+
+    <script>
+        $(document).ready(function () {
+            $('#registerForm').on('submit', function () {
+                // Show loading overlay when the form is submitted
+                $('#loadingOverlay').fadeIn();
+
+                // Let the form submission proceed naturally without preventing it
+                // The loader will stop when the redirection occurs
+            });
+        });
+    </script>
+}

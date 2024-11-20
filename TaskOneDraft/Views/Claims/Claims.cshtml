@@ -1,0 +1,255 @@
+﻿@model TaskOneDraft.Models.Claims
+
+@{
+    ViewData["Title"] = "Claims";
+}
+
+<style>
+    .claims-container {
+        margin-bottom: 100px;
+    }
+
+    glow {
+        0%
+
+    {
+        box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+    }
+
+    100% {
+        box-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc;
+    }
+
+    }
+
+    .form-group label {
+        display: block;
+        text-align: left;
+        color: black;
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-shadow: 0 0 2px #00ffcc;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 2px solid #00ffcc; /* Neon border */
+        border-radius: 4px;
+        background-color: transparent;
+        color: black; /* Adjusted for readability */
+        transition: border 0.3s;
+    }
+
+        .form-control:focus {
+            border-color: #1affff; /* Lighter neon on focus */
+            outline: none;
+            box-shadow: 0 0 8px #00ffcc;
+        }
+
+    .btn-primary {
+        background-color: #00ffcc; /* Neon blue for the button */
+        border: none;
+        padding: 10px 20px;
+        color: black; /* Black text */
+        width: 100%; /* Button width */
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 5px 0;
+        transition: all 0.3s ease; /* Smooth transition */
+    }
+
+        .btn-primary:hover {
+            background-color: blue; /* Lighter neon */
+            box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+        }
+
+    .login-title {
+        color: black;
+        text-shadow: 0 0 2px #00ffcc;
+    }
+        .btn-primary:active {
+            transform: translateY(2px); /* Press effect */
+        }
+
+    .row {
+        margin-bottom: 15px;
+    }
+</style>
+
+<div class="claims-container">
+    <h2 class="login-title">Submit Claims</h2>
+    <form asp-action="Claims" method="post" enctype="multipart/form-data" id="claimForm" class="claim-form">
+        <!-- Lecturer ID Field -->
+        <div class="form-group">
+            <label asp-for="LecturerID">Enter Lecturer ID</label>
+            <input asp-for="LecturerID" class="form-control" />
+            <span asp-validation-for="LecturerID" class="text-danger" />
+        </div>
+
+        <!-- First Name and Last Name side by side -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="FirstName">First Name</label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="LastName">Last Name</label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Claim Period Start and End side by side -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="ClaimsPeriodStart">Claim Period Start</label>
+                    <input asp-for="ClaimsPeriodStart" type="date" class="form-control" />
+                    <span asp-validation-for="ClaimsPeriodStart" class="text-danger" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="ClaimsPeriodEnd">Claim Period End</label>
+                    <input asp-for="ClaimsPeriodEnd" type="date" class="form-control" />
+                    <span asp-validation-for="ClaimsPeriodEnd" class="text-danger" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Hours Worked and Rate per Hour side by side -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="HoursWorked">Hours Worked</label>
+                    <input asp-for="HoursWorked" class="form-control" id="hoursWorked" />
+                    <span asp-validation-for="HoursWorked" class="text-danger" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="RateHour">Rate per Hour</label>
+                    <input asp-for="RateHour" class="form-control" id="ratePerHour" />
+                    <span asp-validation-for="RateHour" class="text-danger" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Description of Work takes full width -->
+        <div class="form-group">
+            <label asp-for="DescriptionOfWork">Description of Work</label>
+            <input asp-for="DescriptionOfWork" class="form-control" />
+            <span asp-validation-for="DescriptionOfWork" class="text-danger" />
+        </div>
+
+        <!-- Supporting Documents -->
+        <div class="form-group">
+            <label>Attach Supporting Documents</label>
+            <input type="file" name="supportingDocument" class="form-control" id="supportingDocument" />
+        </div>
+
+        <input asp-for="UserID" type="hidden" />
+        <input asp-for="ClaimStatus" type="hidden" />
+
+        <button type="submit" class="btn-primary">Submit</button>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+
+    <script>
+        $(document).ready(function () {
+            $('#claimForm').on('submit', function (event) {
+                event.preventDefault();
+
+                toastr.clear(); // Clear previous toastr messages
+
+                // Clear previous error messages
+                $('.text-danger').text('');
+
+                // Validate required fields
+                var isValid = true;
+                $('#claimForm input[required], #claimForm textarea[required]').each(function () {
+                    if ($(this).val().trim() === '') {
+                        isValid = false;
+                        $(this).addClass('is-invalid'); // Highlight invalid fields
+
+                        // Show error message below the field
+                        $(this).next('.text-danger').text('This field is required.');
+                    } else {
+                        $(this).removeClass('is-invalid');
+                        $(this).next('.text-danger').text(''); // Clear the error message
+                    }
+                });
+
+                if (!isValid) {
+                    toastr.error('Please fill in all required fields.', 'Form Error', {
+                        "positionClass": "toast-top-right",
+                        "timeOut": "5000",
+                        "closeButton": true,
+                        "progressBar": true
+                    });
+                    return; // Prevent further execution
+                }
+
+                // Validate file input for specific extensions
+                var fileInput = document.getElementById("supportingDocument");
+                var file = fileInput.files[0];
+
+                if (file) {
+                    var validExtensions = [".jpg", ".jpeg", ".png", ".docx", ".xlsx", ".pdf"];
+                    var fileName = file.name.toLowerCase();
+                    var fileExtension = fileName.substring(fileName.lastIndexOf('.'));
+
+                    if (!validExtensions.includes(fileExtension)) {
+                        toastr.error('Invalid file type! Attach documents that are .jpg, .jpeg, .png, .docx, .xlsx, .pdf.', 'File Error', {
+                            "positionClass": "toast-top-right",
+                            "timeOut": "5000",
+                            "closeButton": true,
+                            "progressBar": true
+                        });
+                        return; // Prevent form submission
+                    }
+                }
+
+                // Calculate total amount
+                var hoursWorked = parseFloat($('#hoursWorked').val()) || 0;
+                var ratePerHour = parseFloat($('#ratePerHour').val()) || 0;
+                var totalAmount = hoursWorked * ratePerHour;
+
+                toastr.success('Total amount due: R' + totalAmount.toFixed(2), 'Amount Calculated', {
+                    "positionClass": "toast-top-right",
+                    "timeOut": "5000",
+                    "closeButton": true,
+                    "progressBar": true
+                });
+
+                setTimeout(function () {
+                    toastr.success('Claim has been submitted successfully!', 'Submission Successful', {
+                        "positionClass": "toast-top-right",
+                        "timeOut": "5000",
+                        "closeButton": true,
+                        "progressBar": true
+                    });
+
+                    setTimeout(function () {
+                        $('#claimForm')[0].submit(); //Submit the form
+                    }, 1000);
+                }, 1000);
+            });
+        });
+    </script>
+}
