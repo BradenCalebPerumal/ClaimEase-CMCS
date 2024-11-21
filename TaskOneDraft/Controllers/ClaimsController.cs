@@ -33,20 +33,21 @@ namespace TaskOneDraft.Controllers
         //action to view lecturers
         public async Task<IActionResult> ViewLecturers()
         {
-            var users = await _userManager.Users.ToListAsync(); //fetching all users
-            var lecturers = new List<IdentityUser>(); //list to store lecturers
+            var users = await _userManager.Users.ToListAsync(); // Fetch all users
+            var lecturers = new List<(string Id, string Email, string FirstName)>(); // Tuple to store required info
 
             foreach (var user in users)
             {
-                var roles = await _userManager.GetRolesAsync(user); //fetch roles of each user
-                if (!roles.Contains("Admin")) //exclude users with the "Admin" role
+                var roles = await _userManager.GetRolesAsync(user); // Fetch roles for each user
+                if (!roles.Contains("Admin")) // Exclude Admin users
                 {
-                    lecturers.Add(user); //add non-admin users to lecturers list
+                    lecturers.Add((user.Id, user.Email, user.FirstName)); // Add Id, Email, and FirstName
                 }
             }
 
-            return View(lecturers); //pass the filtered list of users to the view
+            return View(lecturers); // Pass the filtered list to the view
         }
+
 
         //get: display claims for status update
         public async Task<IActionResult> UpdateClaimStatus()
@@ -108,8 +109,19 @@ namespace TaskOneDraft.Controllers
         //get: display claims with userid
         public async Task<IActionResult> ViewAllClaims()
         {
-            var claims = await _context.Claims.ToListAsync(); //fetch all claims
-            return View(claims); //pass claims to the view
+            var claims = _context.Claims.ToList(); // Fetch claims
+            var enrichedClaims = new List<(Claims Claim, string FirstName)>(); // To store claims with user first names
+
+            foreach (var claim in claims)
+            {
+                // Fetch the user using UserID from the claim
+                var user = await _userManager.FindByIdAsync(claim.UserID);
+                var firstName = user?.FirstName ?? "Unknown"; // Retrieve first name or default to 'Unknown'
+
+                enrichedClaims.Add((claim, firstName)); // Add enriched claim to the list
+            }
+
+            return View(enrichedClaims);
         }
 
         //post: update user information
@@ -161,9 +173,21 @@ namespace TaskOneDraft.Controllers
         {
             return View(); //display faqs view
         }
-        public IActionResult GenerateReport()
+        public async Task<IActionResult> GenerateReport()
         {
-            return View(); //display faqs view
+              var users = await _userManager.Users.ToListAsync(); // Fetch all users
+            var lecturers = new List<(string Id, string Email, string FirstName)>(); // Tuple to store required info
+
+            foreach (var user in users)
+            {
+                var roles = await _userManager.GetRolesAsync(user); // Fetch roles for each user
+                if (!roles.Contains("Admin")) // Exclude Admin users
+                {
+                    lecturers.Add((user.Id, user.Email, user.FirstName)); // Add Id, Email, and FirstName
+                }
+            }
+
+            return View(lecturers); // Pass the filtered list to the view
         }
         public IActionResult GenerateReportt()
         {
@@ -185,9 +209,28 @@ namespace TaskOneDraft.Controllers
 
             return View(claims); //pass claims to the view
         }
+        [HttpGet]
+        public async Task<IActionResult> GetLecturerFirstName()
+        {
+            // Get the logged-in user's ID
+            var userId = _userManager.GetUserId(User);
+            var user = await _userManager.Users.FirstOrDefaultAsync(u => u.Id == userId);
+
+            if (user == null)
+            {
+                return NotFound("User not found");
+            }
+
+            return Ok(user.FirstName); // Return the FirstName
+        }
+        private async Task<string> GetLecturerFirstNameByIdAsync(string lecturerId)
+        {
+            var user = await _userManager.Users.FirstOrDefaultAsync(u => u.Id == lecturerId);
+            return user?.FirstName ?? string.Empty; // Return FirstName or an empty string if not found
+        }
 
         //post: submit claims
-[HttpPost]
+        [HttpPost]
 public async Task<IActionResult> Claims(Claims claims, IFormFile supportingDocument)
 {
     Console.WriteLine("Claims action called"); // Log action call
@@ -256,12 +299,16 @@ public async Task<IActionResult> Claims(Claims claims, IFormFile supportingDocum
     {
         ModelState.AddModelError("Email", "Failed to retrieve user email.");
         return View(claims);
-    }
+            }
+            ModelState.Remove("LecturerID");
 
-    if (ModelState.IsValid)
+            claims.LecturerID = user.FirstName;
+
+            if (ModelState.IsValid)
     {
         Console.WriteLine("ModelState is valid"); // Log valid model state
         claims.DateSubmitted = DateTime.Now;
+             
 
         // Calculate total amount
         claims.TotalAmount = claims.HoursWorked * claims.RateHour;
@@ -493,8 +540,10 @@ public async Task<IActionResult> Claims(Claims claims, IFormFile supportingDocum
         }
 
         [HttpPost]
-        public IActionResult GenerateReportt(string lecturerId, DateTime startDate, DateTime endDate)
+        public async Task<IActionResult> GenerateReportt(string lecturerId, DateTime startDate, DateTime endDate)
         {
+            var userr = await _userManager.Users.FirstOrDefaultAsync(u => u.Id == lecturerId);
+            string empnum = userr.FirstName;
             // Fetch all claims for the specific lecturer within the date range
             var claims = _context.Claims
                 .Where(c => c.UserID == lecturerId && c.DateSubmitted >= startDate && c.DateSubmitted <= endDate)
@@ -510,12 +559,12 @@ public async Task<IActionResult> Claims(Claims claims, IFormFile supportingDocum
             var otherStatusClaims = claims.Where(c => c.ClaimStatus != "Approved").ToList();
 
             // Generate PDF report
-            var pdfBytes = GeneratePdf(approvedClaims, otherStatusClaims, startDate, endDate);
+            var pdfBytes = GeneratePdf(empnum, approvedClaims, otherStatusClaims, startDate, endDate);
 
             // Return the PDF file
             return File(pdfBytes, "application/pdf", $"ClaimReport_{startDate:yyyyMMdd}-{endDate:yyyyMMdd}.pdf");
         }
-        private byte[] GeneratePdf(
+        private byte[] GeneratePdf(string lecId,
     IEnumerable<Claims> approvedClaims,
     IEnumerable<Claims> otherStatusClaims,
     DateTime startDate,
@@ -610,7 +659,7 @@ public async Task<IActionResult> Claims(Claims claims, IFormFile supportingDocum
                 document.Add(new Paragraph($"Date Range: {startDate:yyyy-MM-dd} to {endDate:yyyy-MM-dd}", subHeaderFont));
 
                 // Add another space for separation
-                document.Add(new Paragraph(" "));
+                document.Add(new Paragraph("Lecturer ID: "+lecId));
 
                 var separatorr = new LineSeparator(1f, 100f, BaseColor.LIGHT_GRAY, Element.ALIGN_CENTER, -2);
                 document.Add(separator);
@@ -622,19 +671,18 @@ public async Task<IActionResult> Claims(Claims claims, IFormFile supportingDocum
                     document.Add(new Paragraph("Unapproved Claims", otherClaimsTitleFont));
                     document.Add(new Paragraph(" "));
 
-                    var otherStatusTable = new PdfPTable(5) { WidthPercentage = 100 };
+                    var otherStatusTable = new PdfPTable(4) { WidthPercentage = 100 };
                     otherStatusTable.SpacingBefore = 10f;
                     otherStatusTable.SpacingAfter = 10f;
 
                     // Table Header
-                    AddTableHeader(otherStatusTable, new[] { "Claim ID", "Lecturer ID", "Status", "Gross Pay (R)", "Date Submitted" });
+                    AddTableHeader(otherStatusTable, new[] { "Claim ID", "Status", "Gross Pay (R)", "Date Submitted" });
 
                     if (otherStatusClaims.Any())
                     {
                         foreach (var claim in otherStatusClaims)
                         {
                             otherStatusTable.AddCell(claim.ID.ToString());
-                            otherStatusTable.AddCell(claim.LecturerID);
                             otherStatusTable.AddCell(claim.ClaimStatus);
                             otherStatusTable.AddCell(claim.TotalAmount.ToString("F2"));
                             otherStatusTable.AddCell(claim.DateSubmitted.ToString("yyyy-MM-dd"));
@@ -659,19 +707,18 @@ public async Task<IActionResult> Claims(Claims claims, IFormFile supportingDocum
                 document.Add(new Paragraph("Approved Claims", approvedClaimsTitleFont));
                 document.Add(new Paragraph(" "));
 
-                var approvedTable = new PdfPTable(6) { WidthPercentage = 100 };
+                var approvedTable = new PdfPTable(5) { WidthPercentage = 100 };
                 approvedTable.SpacingBefore = 10f;
                 approvedTable.SpacingAfter = 10f;
 
                 // Table Header
-                AddTableHeader(approvedTable, new[] { "Claim ID", "Lecturer ID", "Hours Worked", "Overtime Hours", "Gross Pay (R)", "Net Pay (R)" });
+                AddTableHeader(approvedTable, new[] { "Claim ID", "Hours Worked", "Overtime Hours", "Gross Pay (R)", "Net Pay (R)" });
 
                 if (approvedClaims.Any())
                 {
                     foreach (var claim in approvedClaims)
                     {
                         approvedTable.AddCell(claim.ID.ToString());
-                        approvedTable.AddCell(claim.LecturerID);
                         approvedTable.AddCell(claim.HoursWorked.ToString("F2"));
                         approvedTable.AddCell((claim.OvertimeHours ?? 0).ToString("F2"));
                         approvedTable.AddCell(claim.TotalAmount.ToString("F2"));
@@ -761,6 +808,70 @@ public async Task<IActionResult> Claims(Claims claims, IFormFile supportingDocum
         {
             ViewBag.LecturerId = lecturerId;
             return View();
+        }
+        [HttpGet]
+        public async Task<IActionResult> EditLecturer(string id)
+        {
+            var lecturer = await _userManager.FindByIdAsync(id);
+            if (lecturer == null)
+            {
+                return NotFound("Lecturer not found.");
+            }
+
+            var model = new LecturerEditViewModel
+            {
+                Id = lecturer.Id,
+                Email = lecturer.Email,
+                PhoneNumber = lecturer.PhoneNumber
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditLecturer(LecturerEditViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var lecturer = await _userManager.FindByIdAsync(model.Id);
+            if (lecturer == null)
+            {
+                return NotFound("Lecturer not found.");
+            }
+
+            lecturer.Email = model.Email;
+            lecturer.PhoneNumber = model.PhoneNumber;
+
+            var emailUpdateResult = await _userManager.UpdateAsync(lecturer);
+            if (!emailUpdateResult.Succeeded)
+            {
+                foreach (var error in emailUpdateResult.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+                return View(model);
+            }
+
+            if (!string.IsNullOrEmpty(model.NewPassword))
+            {
+                var resetToken = await _userManager.GeneratePasswordResetTokenAsync(lecturer);
+                var passwordResult = await _userManager.ResetPasswordAsync(lecturer, resetToken, model.NewPassword);
+
+                if (!passwordResult.Succeeded)
+                {
+                    foreach (var error in passwordResult.Errors)
+                    {
+                        ModelState.AddModelError("", error.Description);
+                    }
+                    return View(model);
+                }
+            }
+
+            TempData["SuccessMessage"] = "Lecturer details updated successfully.";
+            return RedirectToAction("ViewLecturers");
         }
 
     }

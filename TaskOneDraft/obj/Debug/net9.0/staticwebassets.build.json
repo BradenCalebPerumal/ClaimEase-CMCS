@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "amOVz0bGFmDRAkHVBdbbfReHvmM1jU8AyBo0CNqngjU=",
+  "Hash": "ns5LShgxUrzZEwVUi/JJA07lf7DHDu3diAr69gT3yAc=",
   "Source": "TaskOneDraft",
   "BasePath": "_content/TaskOneDraft",
   "Mode": "Default",
@@ -6191,6 +6191,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\2dba7f77-9f30-4d25-9a7a-9728bd78c707.pdf"
     },
     {
+      "Identity": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\wwwroot\\uploads\\3d2e6547-d5e7-4613-977c-5f61a179af1c.png",
+      "SourceId": "TaskOneDraft",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\wwwroot\\",
+      "BasePath": "_content/TaskOneDraft",
+      "RelativePath": "uploads/3d2e6547-d5e7-4613-977c-5f61a179af1c#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yskzjsx3lq",
+      "Integrity": "Egdzlvd/tuwg+lvi0UHjE7vA4qTlYXmJwIrmCbzah1s=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\3d2e6547-d5e7-4613-977c-5f61a179af1c.png"
+    },
+    {
       "Identity": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\wwwroot\\uploads\\43535d31-f92b-407e-bed1-e12c611841f2.png",
       "SourceId": "TaskOneDraft",
       "SourceType": "Discovered",
@@ -6821,6 +6842,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\d1b2958c-6579-4975-809c-dc2c387caabc.pdf"
     },
     {
+      "Identity": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\wwwroot\\uploads\\dc37315e-d40b-48cc-ac42-5b36ae0ba9e6.png",
+      "SourceId": "TaskOneDraft",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\wwwroot\\",
+      "BasePath": "_content/TaskOneDraft",
+      "RelativePath": "uploads/dc37315e-d40b-48cc-ac42-5b36ae0ba9e6#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kct28gsd1v",
+      "Integrity": "7LZqoU3P9zSxytX/HNQPu3SrNA92oYqpUVShgnNvufw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\dc37315e-d40b-48cc-ac42-5b36ae0ba9e6.png"
+    },
+    {
       "Identity": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\wwwroot\\uploads\\de1fea69-2934-43fd-9efb-4a5e04e03f44.pdf",
       "SourceId": "TaskOneDraft",
       "SourceType": "Discovered",
@@ -6945,6 +6987,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\fdb6701b-901e-4be5-b664-79af310a7499.png"
+    },
+    {
+      "Identity": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\wwwroot\\uploads\\ffecbc5c-0846-4c81-a7d5-58eeb4e4a4db.png",
+      "SourceId": "TaskOneDraft",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\wwwroot\\",
+      "BasePath": "_content/TaskOneDraft",
+      "RelativePath": "uploads/ffecbc5c-0846-4c81-a7d5-58eeb4e4a4db#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kct28gsd1v",
+      "Integrity": "7LZqoU3P9zSxytX/HNQPu3SrNA92oYqpUVShgnNvufw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\ffecbc5c-0846-4c81-a7d5-58eeb4e4a4db.png"
     }
   ],
   "Endpoints": [
@@ -40379,6 +40442,88 @@
       ]
     },
     {
+      "Route": "uploads/3d2e6547-d5e7-4613-977c-5f61a179af1c.png",
+      "AssetFile": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\wwwroot\\uploads\\3d2e6547-d5e7-4613-977c-5f61a179af1c.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "46861"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Egdzlvd/tuwg+lvi0UHjE7vA4qTlYXmJwIrmCbzah1s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 21 Nov 2024 16:33:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Egdzlvd/tuwg+lvi0UHjE7vA4qTlYXmJwIrmCbzah1s="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/3d2e6547-d5e7-4613-977c-5f61a179af1c.yskzjsx3lq.png",
+      "AssetFile": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\wwwroot\\uploads\\3d2e6547-d5e7-4613-977c-5f61a179af1c.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "46861"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Egdzlvd/tuwg+lvi0UHjE7vA4qTlYXmJwIrmCbzah1s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 21 Nov 2024 16:33:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yskzjsx3lq"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/3d2e6547-d5e7-4613-977c-5f61a179af1c.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Egdzlvd/tuwg+lvi0UHjE7vA4qTlYXmJwIrmCbzah1s="
+        }
+      ]
+    },
+    {
       "Route": "uploads/43535d31-f92b-407e-bed1-e12c611841f2.kdd7ky4o3s.png",
       "AssetFile": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\wwwroot\\uploads\\43535d31-f92b-407e-bed1-e12c611841f2.png",
       "Selectors": [],
@@ -42839,6 +42984,88 @@
       ]
     },
     {
+      "Route": "uploads/dc37315e-d40b-48cc-ac42-5b36ae0ba9e6.kct28gsd1v.png",
+      "AssetFile": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\wwwroot\\uploads\\dc37315e-d40b-48cc-ac42-5b36ae0ba9e6.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "54436"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7LZqoU3P9zSxytX/HNQPu3SrNA92oYqpUVShgnNvufw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 21 Nov 2024 16:32:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kct28gsd1v"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/dc37315e-d40b-48cc-ac42-5b36ae0ba9e6.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7LZqoU3P9zSxytX/HNQPu3SrNA92oYqpUVShgnNvufw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/dc37315e-d40b-48cc-ac42-5b36ae0ba9e6.png",
+      "AssetFile": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\wwwroot\\uploads\\dc37315e-d40b-48cc-ac42-5b36ae0ba9e6.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "54436"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7LZqoU3P9zSxytX/HNQPu3SrNA92oYqpUVShgnNvufw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 21 Nov 2024 16:32:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7LZqoU3P9zSxytX/HNQPu3SrNA92oYqpUVShgnNvufw="
+        }
+      ]
+    },
+    {
       "Route": "uploads/de1fea69-2934-43fd-9efb-4a5e04e03f44.awaju93mo8.pdf",
       "AssetFile": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\wwwroot\\uploads\\de1fea69-2934-43fd-9efb-4a5e04e03f44.pdf",
       "Selectors": [],
@@ -43327,6 +43554,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-QeKCQAtnm2hHdmutvKDzSF9fMoUNiLesbrI9fgfK4Io="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/ffecbc5c-0846-4c81-a7d5-58eeb4e4a4db.kct28gsd1v.png",
+      "AssetFile": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\wwwroot\\uploads\\ffecbc5c-0846-4c81-a7d5-58eeb4e4a4db.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "54436"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7LZqoU3P9zSxytX/HNQPu3SrNA92oYqpUVShgnNvufw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 21 Nov 2024 16:28:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kct28gsd1v"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/ffecbc5c-0846-4c81-a7d5-58eeb4e4a4db.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7LZqoU3P9zSxytX/HNQPu3SrNA92oYqpUVShgnNvufw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/ffecbc5c-0846-4c81-a7d5-58eeb4e4a4db.png",
+      "AssetFile": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\wwwroot\\uploads\\ffecbc5c-0846-4c81-a7d5-58eeb4e4a4db.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "54436"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7LZqoU3P9zSxytX/HNQPu3SrNA92oYqpUVShgnNvufw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 21 Nov 2024 16:28:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7LZqoU3P9zSxytX/HNQPu3SrNA92oYqpUVShgnNvufw="
         }
       ]
     }

@@ -96,7 +96,7 @@
                         <td>@claim.ID</td>
                         <td>@claim.ClaimsPeriodStart.ToString("yyyy-MM-dd")</td>
                         <td>@claim.ClaimsPeriodEnd.ToString("yyyy-MM-dd")</td>
-                        <td>@claim.TotalAmount.ToString("C")</td>
+                        <td>@claim.TotalAmount.ToString("C", new System.Globalization.CultureInfo("en-ZA"))</td>
                         <td>@claim.ClaimStatus</td> <!-- Assuming Status is a property in your Claims model -->
                         <td>@claim.ClaimsPeriodStart.ToString("yyyy-MM-dd")</td> <!-- Assuming Date Submitted is tracked as the Claim Period Start -->
                     </tr>

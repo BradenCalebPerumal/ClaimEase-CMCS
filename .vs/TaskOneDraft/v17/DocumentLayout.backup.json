@@ -3,20 +3,88 @@
   "WorkspaceRootPath": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\claims\\generatereportform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\claims\\generatereportform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\claims\\viewlecturers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\claims\\viewlecturers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\areas\\identity\\pages\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\areas\\identity\\pages\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\claims\\viewallclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\claims\\viewallclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\controllers\\claimscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\controllers\\claimscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\claims\\viewclaimstatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\claims\\viewclaimstatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\claims\\viewlecturers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\claims\\viewlecturers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\claims\\generatereport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\claims\\generatereport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\claims\\updateclaimstatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\claims\\updateclaimstatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\claims\\viewclaimhistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\claims\\viewclaimhistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\claims\\claimsummary.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\claims\\claimsummary.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\claims\\claims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\claims\\claims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\claims\\generatereportform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\claims\\generatereportform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\claims\\faqs.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\claims\\faqs.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\areas\\identity\\pages\\account\\resetpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\areas\\identity\\pages\\account\\resetpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\claims\\editlecturer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\claims\\editlecturer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\models\\lecturereditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\models\\lecturereditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Migrations\\20241121161103_abb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TaskOneDraft\\Migrations\\20241121161103_abb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\taskonedraft.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -43,10 +111,6 @@
       "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\areas\\identity\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\role\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\role\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -67,18 +131,6 @@
       "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\areas\\identity\\pages\\account\\manage\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\claims\\viewclaimhistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\claims\\viewclaimhistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\claims\\viewallclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\claims\\viewallclaims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\claims\\claims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\claims\\claims.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\models\\claimsvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\models\\claimsvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -87,16 +139,8 @@
       "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\models\\filesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\claims\\claimsummary.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\claims\\claimsummary.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\models\\claims.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\models\\claims.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -105,14 +149,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AB3B693E-875A-4EFA-A9F4-087621D6FED9}|TestProject1\\TestProject1.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\testproject1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AB3B693E-875A-4EFA-A9F4-087621D6FED9}|TestProject1\\TestProject1.csproj|solutionrelative:testproject1\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\claims\\updateclaimstatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\claims\\updateclaimstatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\claims\\viewclaimstatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\claims\\viewclaimstatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\claims\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -127,16 +163,8 @@
       "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\home\\termsofuse.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\areas\\identity\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\areas\\identity\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\views\\claims\\faqs.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\views\\claims\\faqs.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -149,10 +177,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\controllers\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\controllers\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|solutionrelative:taskonedraft\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8FAFED38-BF2E-4D5B-B1C9-36573A9BF1E0}|TaskOneDraft\\TaskOneDraft.csproj|c:\\users\\caleb\\onedrive - dlssa\\bcad degree\\year two\\sem 2\\prog6212\\git submissions\\prog6212-poe-calebperumal28\\taskonedraft\\migrations\\20241016171558_firstone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -174,87 +198,240 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Areas\\Identity\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "TaskOneDraft\\Areas\\Identity\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Areas\\Identity\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "TaskOneDraft\\Areas\\Identity\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T09:25:33.7Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ClaimsController.cs",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Controllers\\ClaimsController.cs",
               "RelativeDocumentMoniker": "TaskOneDraft\\Controllers\\ClaimsController.cs",
               "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Controllers\\ClaimsController.cs",
               "RelativeToolTip": "TaskOneDraft\\Controllers\\ClaimsController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAswO8BAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAewGsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-10T09:15:08.384Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "TaskOneDraft\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAsAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-10T09:08:21.102Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GenerateReport.cshtml",
-              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\GenerateReport.cshtml",
-              "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Claims\\GenerateReport.cshtml",
-              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\GenerateReport.cshtml",
-              "RelativeToolTip": "TaskOneDraft\\Views\\Claims\\GenerateReport.cshtml",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAhwGMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-18T08:34:57.16Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "ViewLecturers.cshtml",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\ViewLecturers.cshtml",
               "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Claims\\ViewLecturers.cshtml",
               "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\ViewLecturers.cshtml",
               "RelativeToolTip": "TaskOneDraft\\Views\\Claims\\ViewLecturers.cshtml",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGsAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHcAAABoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-18T08:35:23.567Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GenerateReport.cshtml",
+              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\GenerateReport.cshtml",
+              "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Claims\\GenerateReport.cshtml",
+              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\GenerateReport.cshtml",
+              "RelativeToolTip": "TaskOneDraft\\Views\\Claims\\GenerateReport.cshtml",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAHgAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-18T08:34:57.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ViewAllClaims.cshtml",
+              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\ViewAllClaims.cshtml",
+              "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Claims\\ViewAllClaims.cshtml",
+              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\ViewAllClaims.cshtml",
+              "RelativeToolTip": "TaskOneDraft\\Views\\Claims\\ViewAllClaims.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-18T08:35:11.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ResetPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+              "RelativeDocumentMoniker": "TaskOneDraft\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+              "RelativeToolTip": "TaskOneDraft\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T17:46:21.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "TaskOneDraft\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAADcBAAAAAAAAAAAAAPQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-10T09:08:21.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "TaskOneDraft\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAOcAAAAAAAAAAAAqwAMBAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-17T18:08:42.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UpdateClaimStatus.cshtml",
+              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\UpdateClaimStatus.cshtml",
+              "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Claims\\UpdateClaimStatus.cshtml",
+              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\UpdateClaimStatus.cshtml",
+              "RelativeToolTip": "TaskOneDraft\\Views\\Claims\\UpdateClaimStatus.cshtml",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAAAJwAAACKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-18T08:35:06.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ViewClaimStatus.cshtml",
+              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\ViewClaimStatus.cshtml",
+              "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Claims\\ViewClaimStatus.cshtml",
+              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\ViewClaimStatus.cshtml",
+              "RelativeToolTip": "TaskOneDraft\\Views\\Claims\\ViewClaimStatus.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGIAAABrAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-18T08:35:21.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ViewClaimHistory.cshtml",
+              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\ViewClaimHistory.cshtml",
+              "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Claims\\ViewClaimHistory.cshtml",
+              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\ViewClaimHistory.cshtml",
+              "RelativeToolTip": "TaskOneDraft\\Views\\Claims\\ViewClaimHistory.cshtml",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAAJsAAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-18T08:35:16.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ClaimSummary.cshtml",
+              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\ClaimSummary.cshtml",
+              "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Claims\\ClaimSummary.cshtml",
+              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\ClaimSummary.cshtml",
+              "RelativeToolTip": "TaskOneDraft\\Views\\Claims\\ClaimSummary.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAB9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T17:22:02.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Claims.cshtml",
+              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\Claims.cshtml",
+              "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Claims\\Claims.cshtml",
+              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\Claims.cshtml",
+              "RelativeToolTip": "TaskOneDraft\\Views\\Claims\\Claims.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-18T08:34:28.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "GenerateReportForm.cshtml",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\GenerateReportForm.cshtml",
               "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Claims\\GenerateReportForm.cshtml",
               "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\GenerateReportForm.cshtml",
               "RelativeToolTip": "TaskOneDraft\\Views\\Claims\\GenerateReportForm.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABUAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAqwHsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-20T21:21:04.698Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
+              "Title": "FAQS.cshtml",
+              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\FAQS.cshtml",
+              "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Claims\\FAQS.cshtml",
+              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\FAQS.cshtml",
+              "RelativeToolTip": "TaskOneDraft\\Views\\Claims\\FAQS.cshtml",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-18T08:34:51.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ResetPasswordConfirmation.cshtml",
+              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
+              "RelativeDocumentMoniker": "TaskOneDraft\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
+              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
+              "RelativeToolTip": "TaskOneDraft\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T17:46:27.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EditLecturer.cshtml",
+              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\EditLecturer.cshtml",
+              "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Claims\\EditLecturer.cshtml",
+              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\EditLecturer.cshtml",
+              "RelativeToolTip": "TaskOneDraft\\Views\\Claims\\EditLecturer.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T17:33:30.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LecturerEditViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Models\\LecturerEditViewModel.cs",
+              "RelativeDocumentMoniker": "TaskOneDraft\\Models\\LecturerEditViewModel.cs",
+              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Models\\LecturerEditViewModel.cs",
+              "RelativeToolTip": "TaskOneDraft\\Models\\LecturerEditViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T17:32:28.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "UnitTest2.cs",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TestProject1\\UnitTest2.cs",
               "RelativeDocumentMoniker": "TestProject1\\UnitTest2.cs",
@@ -266,7 +443,71 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 17,
+              "Title": "20241121161103_abb.cs",
+              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Migrations\\20241121161103_abb.cs",
+              "RelativeDocumentMoniker": "TaskOneDraft\\Migrations\\20241121161103_abb.cs",
+              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Migrations\\20241121161103_abb.cs",
+              "RelativeToolTip": "TaskOneDraft\\Migrations\\20241121161103_abb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T16:11:03.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "TaskOneDraft\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "TaskOneDraft\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAGIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-17T18:25:28.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\appsettings.json",
+              "RelativeDocumentMoniker": "TaskOneDraft\\appsettings.json",
+              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\appsettings.json",
+              "RelativeToolTip": "TaskOneDraft\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-16T16:43:56.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "TaskOneDraft\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "TaskOneDraft\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAswGUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T16:03:16.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Areas\\Identity\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "TaskOneDraft\\Areas\\Identity\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Areas\\Identity\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "TaskOneDraft\\Areas\\Identity\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T09:25:33.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "UnitTest3.cs",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TestProject1\\UnitTest3.cs",
               "RelativeDocumentMoniker": "TestProject1\\UnitTest3.cs",
@@ -278,7 +519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 21,
               "Title": "TaskOneDraft.csproj",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\TaskOneDraft.csproj",
               "RelativeDocumentMoniker": "TaskOneDraft\\TaskOneDraft.csproj",
@@ -286,12 +527,11 @@
               "RelativeToolTip": "TaskOneDraft\\TaskOneDraft.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-18T09:32:38.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T09:32:38.157Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 23,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Program.cs",
               "RelativeDocumentMoniker": "TaskOneDraft\\Program.cs",
@@ -303,7 +543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 22,
               "Title": "TestProject1.csproj",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TestProject1\\TestProject1.csproj",
               "RelativeDocumentMoniker": "TestProject1\\TestProject1.csproj",
@@ -311,12 +551,11 @@
               "RelativeToolTip": "TestProject1\\TestProject1.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-21T14:31:35.934Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T14:31:35.934Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 28,
               "Title": "AdminDashboard.cshtml",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\AdminDashboard.cshtml",
               "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Claims\\AdminDashboard.cshtml",
@@ -328,7 +567,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 27,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Role\\Index.cshtml",
               "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Role\\Index.cshtml",
@@ -340,7 +579,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 29,
               "Title": "ChangePassword.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
               "RelativeDocumentMoniker": "TaskOneDraft\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
@@ -352,7 +591,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 30,
               "Title": "ChangePassword.cshtml",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
               "RelativeDocumentMoniker": "TaskOneDraft\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
@@ -364,7 +603,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 31,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
               "RelativeDocumentMoniker": "TaskOneDraft\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
@@ -376,55 +615,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ViewClaimHistory.cshtml",
-              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\ViewClaimHistory.cshtml",
-              "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Claims\\ViewClaimHistory.cshtml",
-              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\ViewClaimHistory.cshtml",
-              "RelativeToolTip": "TaskOneDraft\\Views\\Claims\\ViewClaimHistory.cshtml",
-              "ViewState": "AgIAAJMAAAAAAAAAAIBJwKYAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-18T08:35:16.765Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ViewAllClaims.cshtml",
-              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\ViewAllClaims.cshtml",
-              "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Claims\\ViewAllClaims.cshtml",
-              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\ViewAllClaims.cshtml",
-              "RelativeToolTip": "TaskOneDraft\\Views\\Claims\\ViewAllClaims.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-18T08:35:11.348Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Claims.cshtml",
-              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\Claims.cshtml",
-              "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Claims\\Claims.cshtml",
-              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\Claims.cshtml",
-              "RelativeToolTip": "TaskOneDraft\\Views\\Claims\\Claims.cshtml",
-              "ViewState": "AgIAAIcAAAAAAAAAAIBJwDsBAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-18T08:34:28.15Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ClaimSummary.cshtml",
-              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\ClaimSummary.cshtml",
-              "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Claims\\ClaimSummary.cshtml",
-              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\ClaimSummary.cshtml",
-              "RelativeToolTip": "TaskOneDraft\\Views\\Claims\\ClaimSummary.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-20T17:22:02.824Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 32,
               "Title": "ClaimsValidator.cs",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Models\\ClaimsValidator.cs",
               "RelativeDocumentMoniker": "TaskOneDraft\\Models\\ClaimsValidator.cs",
@@ -436,7 +627,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 34,
               "Title": "Claims.cs",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Models\\Claims.cs",
               "RelativeDocumentMoniker": "TaskOneDraft\\Models\\Claims.cs",
@@ -448,7 +639,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 33,
               "Title": "FilesModel.cs",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Models\\FilesModel.cs",
               "RelativeDocumentMoniker": "TaskOneDraft\\Models\\FilesModel.cs",
@@ -460,19 +651,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\appsettings.json",
-              "RelativeDocumentMoniker": "TaskOneDraft\\appsettings.json",
-              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\appsettings.json",
-              "RelativeToolTip": "TaskOneDraft\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-16T16:43:56.682Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 35,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "TaskOneDraft\\Models\\ErrorViewModel.cs",
@@ -484,7 +663,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 36,
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TestProject1\\UnitTest1.cs",
               "RelativeDocumentMoniker": "TestProject1\\UnitTest1.cs",
@@ -496,7 +675,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 46,
               "Title": "20241120132350_p3.cs",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Migrations\\20241120132350_p3.cs",
               "RelativeDocumentMoniker": "TaskOneDraft\\Migrations\\20241120132350_p3.cs",
@@ -508,43 +687,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "UpdateClaimStatus.cshtml",
-              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\UpdateClaimStatus.cshtml",
-              "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Claims\\UpdateClaimStatus.cshtml",
-              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\UpdateClaimStatus.cshtml",
-              "RelativeToolTip": "TaskOneDraft\\Views\\Claims\\UpdateClaimStatus.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAACBjwAoAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-18T08:35:06.553Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "ViewClaimStatus.cshtml",
-              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\ViewClaimStatus.cshtml",
-              "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Claims\\ViewClaimStatus.cshtml",
-              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\ViewClaimStatus.cshtml",
-              "RelativeToolTip": "TaskOneDraft\\Views\\Claims\\ViewClaimStatus.cshtml",
-              "ViewState": "AgIAAGUAAAAAAAAAACBjwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-18T08:35:21.059Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "FAQS.cshtml",
-              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\FAQS.cshtml",
-              "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Claims\\FAQS.cshtml",
-              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\FAQS.cshtml",
-              "RelativeToolTip": "TaskOneDraft\\Views\\Claims\\FAQS.cshtml",
-              "ViewState": "AgIAAG8AAAAAAAAAACBjwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-18T08:34:51.5Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 37,
               "Title": "Dashboard.cshtml",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Claims\\Dashboard.cshtml",
               "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Claims\\Dashboard.cshtml",
@@ -556,31 +699,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "TaskOneDraft\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeToolTip": "TaskOneDraft\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AgIAAEUAAAAAAAAAACBjwAEAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-17T18:25:28.606Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "TaskOneDraft\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAHoAAAAAAAAAAAAgwIMAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-17T18:08:42.206Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 45,
               "Title": "20241016185722_la.cs",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Migrations\\20241016185722_la.cs",
               "RelativeDocumentMoniker": "TaskOneDraft\\Migrations\\20241016185722_la.cs",
@@ -592,7 +711,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 44,
               "Title": "20241016171558_FirstOne.cs",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Migrations\\20241016171558_FirstOne.cs",
               "RelativeDocumentMoniker": "TaskOneDraft\\Migrations\\20241016171558_FirstOne.cs",
@@ -604,7 +723,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 40,
               "Title": "DbInitializer.cs",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Areas\\Identity\\Data\\DbInitializer.cs",
               "RelativeDocumentMoniker": "TaskOneDraft\\Areas\\Identity\\Data\\DbInitializer.cs",
@@ -616,7 +735,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 43,
               "Title": "Role.cs",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Controllers\\Role.cs",
               "RelativeDocumentMoniker": "TaskOneDraft\\Controllers\\Role.cs",
@@ -628,7 +747,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 41,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "TaskOneDraft\\Controllers\\HomeController.cs",
@@ -640,7 +759,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 38,
               "Title": "AboutUs.cshtml",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Home\\AboutUs.cshtml",
               "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Home\\AboutUs.cshtml",
@@ -652,7 +771,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 39,
               "Title": "TermsOfUse.cshtml",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Home\\TermsOfUse.cshtml",
               "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Home\\TermsOfUse.cshtml",
@@ -664,7 +783,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 42,
               "Title": "ContactUs.cshtml",
               "DocumentMoniker": "C:\\Users\\Caleb\\OneDrive - DLSSA\\BCAD DEGREE\\Year Two\\Sem 2\\PROG6212\\Git Submissions\\prog6212-poe-CalebPerumal28\\TaskOneDraft\\Views\\Home\\ContactUs.cshtml",
               "RelativeDocumentMoniker": "TaskOneDraft\\Views\\Home\\ContactUs.cshtml",

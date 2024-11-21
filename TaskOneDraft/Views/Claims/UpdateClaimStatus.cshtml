@@ -154,7 +154,7 @@
                             <strong>Period End:</strong> @claim.ClaimsPeriodEnd.ToString("yyyy-MM-dd")
                         </div>
                         <div class="claim-info">
-                            <strong>Total Amount:</strong> @claim.TotalAmount.ToString("C")
+                            <strong>Total Amount:</strong> @claim.TotalAmount.ToString("C", new System.Globalization.CultureInfo("en-ZA"))
                         </div>
                         <div class="claim-info">
                             <strong>Date and Time Submitted:</strong> @claim.DateSubmitted.ToString()
@@ -165,7 +165,7 @@
                         <select class="form-control status-dropdown" data-claim-id="@claim.ID">
                             <option value="" disabled selected hidden style="text-align: center">Change Status Here</option>
                             <option value="Pending">Pending</option>
-                            <option value="Processed" >Processed</option>
+                            <option value="Approved" >Approve</option>
                             <option value="Rejected">Rejected</option>
                         </select>
                         <button class="flip-button view-details" data-claim-id="@claim.ID">View Details</button>

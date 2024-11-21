@@ -233,25 +233,47 @@
     <div class="features-section">
         <h4 class="features-heading">Key Features of ClaimEase CMCS</h4>
         <div class="features-container">
-            <div class="feature">
-                <img src="~/images/document-add-black-interface-symbol-with-plus-sign_icon-icons.com_54557.png" alt="Easy Submission" class="feature-icon" />
+            <div class="feature feature-hover">
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                <lord-icon src="https://cdn.lordicon.com/fjvfsqea.json"
+                           trigger="click"
+                           stroke="bold"
+                           state="hover-unfold"
+                           colors="primary:#121331,secondary:#30e8bd"
+                           style="width:60px;height:60px; margin-bottom: 10px;">
+                </lord-icon>                
                 <h5>Easy Claim Submission</h5>
                 <p>Submit your claims effortlessly with a user-friendly interface that guides you through each step.</p>
             </div>
-            <div class="feature">
-                <img src="~/images/status_magnify_positive_success_search_icon_220281.png" alt="Status Tracking" class="feature-icon" />
+       
+
+
+
+            <div class="feature feature-hover">
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                <lord-icon id="statusTrackingIcon" src="https://cdn.lordicon.com/wjyqkiew.json"
+                           trigger="click"
+                           stroke="bold"
+                           colors="primary:#121331,secondary:#30e8bd"
+                           style="width:60px;height:60px; margin-bottom: 10px;">
+                </lord-icon>
                 <h5>Real-Time Status Tracking</h5>
                 <p>Stay updated with real-time status updates for all your submitted claims, ensuring transparency.</p>
             </div>
-            <div class="feature">
-                <img src="~/images/secure_folder_20470.png" alt="Secure Document Upload" class="feature-icon" />
+
+            <div class="feature feature-hover">
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                <lord-icon src="https://cdn.lordicon.com/tsrgicte.json"
+                           trigger="click"
+                           stroke="bold"
+                           colors="primary:#121331,secondary:#30e8bd"
+                           style="width:60px;height:60px; margin-bottom: 10px;">
+                </lord-icon>
                 <h5>Secure Document Upload</h5>
                 <p>Safely upload supporting documents to back your claims, with secure storage and easy retrieval.</p>
             </div>
-
         </div>
     </div>
-
 
     <!-- Basic Modal -->
     <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModalLabel" aria-hidden="true">
@@ -314,6 +336,25 @@
                 }
 
                 window.currentSlide = changeSlide;
+                    });document.addEventListener("DOMContentLoaded", function () {
+                // Select all features with the hover effect
+                const features = document.querySelectorAll(".feature-hover");
+
+                features.forEach(feature => {
+                    // Select the Lordicon element inside the feature
+                    const lordIcon = feature.querySelector("lord-icon");
+
+                    if (lordIcon) {
+                        // Add hover event listeners to the feature container
+                        feature.addEventListener("mouseenter", () => {
+                            lordIcon.setAttribute("trigger", "loop");
+                        });
+
+                        feature.addEventListener("mouseleave", () => {
+                            lordIcon.setAttribute("trigger", "click");
+                        });
+                    }
+                });
             });
         </script>
     }

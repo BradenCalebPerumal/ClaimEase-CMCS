@@ -83,10 +83,12 @@
     <form asp-action="Claims" method="post" enctype="multipart/form-data" id="claimForm" class="claim-form">
         <!-- Lecturer ID Field -->
         <div class="form-group">
-            <label asp-for="LecturerID">Enter Lecturer ID</label>
-            <input asp-for="LecturerID" class="form-control" />
-            <span asp-validation-for="LecturerID" class="text-danger" />
+            <label for="lecturerId">Lecturer ID</label>
+            <input id="lecturerId" name="LecturerID" class="form-control" readonly /> <!-- Read-only field -->
+            <span asp-validation-for="LecturerID" class="text-danger"></span>
         </div>
+
+
 
         <!-- First Name and Last Name side by side -->
         <div class="row">
@@ -319,6 +321,18 @@
                         $('#claimForm')[0].submit(); // Submit the form
                     }, 1000);
                 }, 1000);
+            });
+            }); $(document).ready(function () {
+            // Fetch the Lecturer ID (FirstName) dynamically
+            $.ajax({
+                url: '/Claims/GetLecturerFirstName', // Replace with your controller's endpoint
+                type: 'GET',
+                success: function (response) {
+                    $('#lecturerId').val(response); // Populate the LecturerID field
+                },
+                error: function () {
+                    alert("Error fetching Lecturer ID");
+                }
             });
         });
     </script>
