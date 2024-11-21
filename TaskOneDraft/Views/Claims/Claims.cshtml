@@ -193,6 +193,13 @@
 </div>
 
 @section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+
     <script>
         $(document).ready(function () {
             // Toggle overtime fields
@@ -278,11 +285,40 @@
                 validateInputs();
             });
 
-            // Form submission validation
+            // Handle form submission with Toastr notifications
             $('#claimForm').on('submit', function (event) {
-                if (!validateInputs()) {
-                    event.preventDefault(); // Prevent form submission
-                }
+                event.preventDefault();
+
+                toastr.clear();
+
+                let hoursWorked = parseFloat($('#hoursWorked').val()) || 0;
+                let ratePerHour = parseFloat($('#ratePerHour').val()) || 0;
+                let overtimeHours = parseFloat($('#overtimeHours').val()) || 0;
+                let overtimeRate = parseFloat($('#overtimeRate').val()) || 0;
+
+                let normalPay = hoursWorked * ratePerHour;
+                let overtimePay = overtimeHours * overtimeRate;
+                let totalAmount = normalPay + overtimePay;
+
+                toastr.success('Total amount due: R' + totalAmount.toFixed(2), 'Amount Calculated', {
+                    "positionClass": "toast-top-right",
+                    "timeOut": "5000",
+                    "closeButton": true,
+                    "progressBar": true
+                });
+
+                setTimeout(function () {
+                    toastr.success('Claim has been submitted successfully!', 'Submission Successful', {
+                        "positionClass": "toast-top-right",
+                        "timeOut": "5000",
+                        "closeButton": true,
+                        "progressBar": true
+                    });
+
+                    setTimeout(function () {
+                        $('#claimForm')[0].submit(); // Submit the form
+                    }, 1000);
+                }, 1000);
             });
         });
     </script>

@@ -20,8 +20,9 @@ public class ClaimsValidator : AbstractValidator<Claims>
 
         // Rule 3: Minimum hourly rate
         RuleFor(c => c.RateHour)
-            .GreaterThanOrEqualTo(50)
-            .WithMessage("Hourly rate below the minimum allowed. The claim will be rejected.");
+            .GreaterThanOrEqualTo(27.50)
+            .WithMessage("Hourly rate below the minimum(R27.50). The claim will be rejected.");
 
     }
 }
+

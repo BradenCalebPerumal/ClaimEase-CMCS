@@ -215,6 +215,7 @@ public async Task<IActionResult> Claims(Claims claims, IFormFile supportingDocum
             ModelState.Remove("RateHour");
             ModelState.Remove("HoursWorked");
             ModelState.Remove("OvertimeHours");
+
             // Handling the supporting document
             if (supportingDocument != null && supportingDocument.Length > 0)
     {
@@ -452,6 +453,21 @@ public async Task<IActionResult> Claims(Claims claims, IFormFile supportingDocum
             }
         }
 
+        /*[HttpGet]
+        [Authorize(Roles = "Admin")] // Ensure only Admins can access
+        public IActionResult RedirectToManage(string userId)
+        {
+            if (string.IsNullOrEmpty(userId))
+            {
+                TempData["ErrorMessage"] = "User ID is required.";
+                return RedirectToAction("ViewLecturers");
+            }
+
+            // Construct the URL for profile management
+            string manageUrl = $"/Identity/Account/Manage?userId={userId}";
+
+            return Redirect(manageUrl);
+        }*/
 
         public async Task<IActionResult> DownloadFile(int id)
         {
@@ -476,15 +492,13 @@ public async Task<IActionResult> Claims(Claims claims, IFormFile supportingDocum
             return File(file.Data, file.ContentType, file.FileName); //Return the file for download
         }
 
-
         [HttpPost]
-        public IActionResult GenerateReportt(DateTime startDate, DateTime endDate)
+        public IActionResult GenerateReportt(string lecturerId, DateTime startDate, DateTime endDate)
         {
-            // Fetch all claims within the date range
+            // Fetch all claims for the specific lecturer within the date range
             var claims = _context.Claims
-                .Where(c => c.DateSubmitted >= startDate && c.DateSubmitted <= endDate)
+                .Where(c => c.UserID == lecturerId && c.DateSubmitted >= startDate && c.DateSubmitted <= endDate)
                 .ToList();
-
             if (!claims.Any())
             {
                 TempData["ErrorMessage"] = "No claims found within the specified date range.";
@@ -753,4 +767,4 @@ public async Task<IActionResult> Claims(Claims claims, IFormFile supportingDocum
 }
 
 
-///done part 3
+///done part 3- final

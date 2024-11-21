@@ -4,14 +4,10 @@
 
 <h2>Generate Claim Report</h2>
 
-@if (TempData["ErrorMessage"] != null)
-{
-    <div class="alert alert-danger">
-        @TempData["ErrorMessage"]
-    </div>
-}
 
 <form asp-action="GenerateReportt" asp-controller="Claims" method="post">
+    <input type="hidden" name="lecturerId" value="@ViewBag.LecturerId" />
+
     <div class="form-group">
         <label for="startDate">Start Date</label>
         <input type="date" id="startDate" name="startDate" class="form-control" required />
