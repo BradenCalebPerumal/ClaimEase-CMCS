@@ -27,42 +27,42 @@
         width: 100%;
         padding: 10px;
         margin-bottom: 15px;
-        border: 2px solid #00ffcc; /* Neon border */
+        border: 2px solid #00ffcc;
         border-radius: 4px;
         background-color: transparent;
-        color: black; /* Adjusted for readability */
+        color: black;
         transition: border 0.3s;
     }
 
         .form-control:focus {
-            border-color: #1affff; /* Lighter neon on focus */
+            border-color: #1affff;
             outline: none;
             box-shadow: 0 0 8px #00ffcc;
         }
 
     .btn-primary {
-        background-color: #00ffcc; /* Neon blue for the button */
+        background-color: #00ffcc;
         border: none;
         padding: 10px 20px;
-        color: black; /* Black text */
-        width: 100%; /* Button width */
+        color: black;
+        width: 100%;
         border-radius: 4px;
         cursor: pointer;
         margin: 5px 0;
-        transition: all 0.3s ease; /* Smooth transition */
+        transition: all 0.3s ease;
     }
 
         .btn-primary:hover {
-            background-color: blue; /* Lighter neon */
+            background-color: blue;
             box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
         }
 
         .btn-primary:active {
-            transform: translateY(2px); /* Press effect */
+            transform: translateY(2px);
         }
 
     .text-danger {
-        color: #ff4d4d; /* Bright red for error messages */
+        color: #ff4d4d;
         font-weight: bold;
     }
 </style>
@@ -70,7 +70,7 @@
 <div class="report-container">
     <h2 class="login-title">Generate Claim Report</h2>
     <form asp-action="GenerateReportt" asp-controller="Claims" method="post" id="generateReportForm">
-        <input type="hidden" name="lecturerId" value="@ViewBag.LecturerId" />
+        <input type="hidden" name="lecturerId" value="@ViewBag.LecturerId" id="lecturerId" />
 
         <div class="form-group">
             <label for="startDate">Start Date</label>
@@ -82,7 +82,7 @@
             <input type="date" id="endDate" name="endDate" class="form-control" required />
         </div>
 
-        <button type="submit" class="btn-primary">Generate Report</button>
+        <button type="submit" class="btn-primary" id="generateButton" disabled>Generate Report</button>
     </form>
 </div>
 
@@ -92,7 +92,59 @@
 
     <script>
         $(document).ready(function () {
-            // Handle form submission with Toastr notifications
+            $('#startDate, #endDate').on('change', function () {
+                validateClaims();
+            });
+
+            function validateClaims() {
+                const lecturerId = $('#lecturerId').val();
+                const startDate = $('#startDate').val();
+                const endDate = $('#endDate').val();
+
+                if (lecturerId && startDate && endDate) {
+                    $.ajax({
+                        url: '@Url.Action("Validateeee", "Claims")',
+                        type: 'POST',
+                        contentType: 'application/json',
+                        data: JSON.stringify({
+                            lecturerId: lecturerId,
+                            startDate: startDate,
+                            endDate: endDate
+                        }),
+                        success: function (response) {
+                            if (response.hasClaims) {
+                                toastr.success('Claims found for the specified range.', 'Validation Success', {
+                                    positionClass: 'toast-top-right',
+                                    timeOut: 3000,
+                                    closeButton: true,
+                                    progressBar: true
+                                });
+                                $('#generateButton').prop('disabled', false);
+                            } else {
+                                toastr.error('No claims found for the specified date range.', 'Validation Error', {
+                                    positionClass: 'toast-top-right',
+                                    timeOut: 3000,
+                                    closeButton: true,
+                                    progressBar: true,
+                                    onHidden: function () {
+                                        $('#generateButton').prop('disabled', true);
+                                        $('#startDate, #endDate').val('');
+                                        $('#generateButton').prop('disabled', false); // Enable button after reset
+                                    }
+                                });
+                                $('#generateButton').prop('disabled', true);
+                            }
+                        },
+                        error: function () {
+                            alert('Error validating claims.');
+                        }
+                    });
+                } else {
+                    $('#generateButton').prop('disabled', true);
+                }
+            }
+
+            // Add Toastr notifications for form submission
             $('#generateReportForm').on('submit', function (event) {
                 event.preventDefault();
 
@@ -106,17 +158,8 @@
                 });
 
                 setTimeout(function () {
-                    toastr.success('Report has been successfully generated!', 'Success', {
-                        "positionClass": "toast-top-right",
-                        "timeOut": "5000",
-                        "closeButton": true,
-                        "progressBar": true
-                    });
-
-                    setTimeout(function () {
-                        $('#generateReportForm')[0].submit(); // Submit the form
-                    }, 1000);
-                }, 1000);
+                    $('#generateReportForm')[0].submit(); // Submit the form after toast
+                }, 3000);
             });
         });
     </script>
