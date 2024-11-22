@@ -105,15 +105,16 @@ namespace TaskOneDraft.Controllers
             //return error response if claim not found or status is invalid
             return Json(new { success = false, message = "Failed to update claim status. Please try again." });
         }
-        [HttpPost]
-        public JsonResult Validateeee([FromBody] ValidateClaimsRequest request)
+        [HttpPost]//indicates that this method handles HTTP POST requests
+        public JsonResult Validateeee([FromBody] ValidateClaimsRequest request)//accepts a JSON request body of type ValidateClaimsRequest
         {
-            var claims = _context.Claims
-                .Where(c => c.UserID == request.LecturerId && c.DateSubmitted >= request.StartDate && c.DateSubmitted <= request.EndDate)
-                .ToList();
+            var claims = _context.Claims//accesses the Claims table in the database context
+                .Where(c => c.UserID == request.LecturerId && c.DateSubmitted >= request.StartDate && c.DateSubmitted <= request.EndDate)//filters claims based on LecturerId and the provided date range
+                .ToList();//converts the filtered claims into a list
 
-            return Json(new { hasClaims = claims.Any() });
+            return Json(new { hasClaims = claims.Any() });//returns a JSON object indicating if any claims exist
         }
+
 
         public class ValidateClaimsRequest
         {

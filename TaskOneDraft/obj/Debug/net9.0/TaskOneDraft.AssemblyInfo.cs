@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TaskOneDraft")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3de161cb3159a6cf0ab2d202eda389aedfa6bd1c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a30fdff4ee98cfce6b418f97b1ffef8855071793")]
 [assembly: System.Reflection.AssemblyProductAttribute("TaskOneDraft")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TaskOneDraft")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
