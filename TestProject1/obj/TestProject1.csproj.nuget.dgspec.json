@@ -94,6 +94,10 @@
             "toastr": {
               "target": "Package",
               "version": "[2.1.1, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.2, )"
             }
           },
           "imports": [

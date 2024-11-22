@@ -1962,6 +1962,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\56bc9b7c-0450-4a51-ae79-cf9ee1f5b79d.pdf'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\6148032d-5d40-443a-88bc-a0014aeed472.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>TaskOneDraft</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/TaskOneDraft</BasePath>
+      <RelativePath>uploads/6148032d-5d40-443a-88bc-a0014aeed472.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>90a9bkpb04</Fingerprint>
+      <Integrity>F1o1dkV/yaKg2NzwBIh68abarulCzk2csa4UNQ7G1fs=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\6148032d-5d40-443a-88bc-a0014aeed472.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\6346214e-9849-4c30-8ef8-6de0fba7b50d.jpeg'))">
       <SourceType>Package</SourceType>
       <SourceId>TaskOneDraft</SourceId>
@@ -2501,6 +2519,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\fb82b394-e087-49cd-b929-c071c5d29189.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\fca4473d-1140-4963-86b0-0e9345be38da.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>TaskOneDraft</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/TaskOneDraft</BasePath>
+      <RelativePath>uploads/fca4473d-1140-4963-86b0-0e9345be38da.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>90a9bkpb04</Fingerprint>
+      <Integrity>F1o1dkV/yaKg2NzwBIh68abarulCzk2csa4UNQ7G1fs=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\fca4473d-1140-4963-86b0-0e9345be38da.pdf'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\fd6730fa-e3df-4901-b1fd-78019770a769.png'))">
       <SourceType>Package</SourceType>
