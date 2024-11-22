@@ -124,14 +124,11 @@ namespace TestProject1
             mockFile.Setup(f => f.CopyToAsync(It.IsAny<Stream>(), default))
                     .Returns<Stream, CancellationToken>((stream, cancellationToken) => memoryStream.CopyToAsync(stream, cancellationToken)); //mock copying of the file to the stream
 
-            //act: submit the claim along with the mock file
             var result = await _controller.Claims(claims, mockFile.Object);
 
-            //assert: check if the result is a redirection to ClaimSummary
             var redirectResult = Assert.IsType<RedirectToActionResult>(result); //assert the action result type
             Assert.Equal("ClaimSummary", redirectResult.ActionName); //assert the action name is ClaimSummary
 
-            //assert: check if the claim was added to the database
             Assert.Equal(3, _context.Claims.Count()); //verify that 3 claims exist in the database (assuming 2 are already there)
         }
     }

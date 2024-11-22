@@ -209,7 +209,6 @@ namespace TaskOneDraft.Controllers
         {
             return View(); //display faqs view
         }
-        //[authorize(roles = "lecturer")]  ---if you want to restrict who can use it
         public async Task<IActionResult> List()
         {
             var claims = await _context.Claims.ToListAsync(); //fetch all claims
@@ -219,7 +218,7 @@ namespace TaskOneDraft.Controllers
         //action to view claim status for logged-in lecturer
         public async Task<IActionResult> ViewClaimStatus()
         {
-            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier); //get logged-in lecturer's userid
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             var claims = _context.Claims.Where(c => c.UserID == userId).ToList(); //retrieve claims associated with logged-in lecturer
 
@@ -245,7 +244,6 @@ namespace TaskOneDraft.Controllers
             return user?.FirstName ?? string.Empty; // Return FirstName or an empty string if not found
         }
 
-        //post: submit claims
         [HttpPost]
 public async Task<IActionResult> Claims(Claims claims, IFormFile supportingDocument)
 {
@@ -253,7 +251,7 @@ public async Task<IActionResult> Claims(Claims claims, IFormFile supportingDocum
 
     string userId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Assign logged-in lecturer's userId
     claims.UserID = userId;
-    Console.WriteLine($"Assigned UserID: {claims.UserID}"); // Log assigned userId
+    Console.WriteLine($"Assigned UserID: {claims.UserID}"); 
     ModelState.Remove("UserID");
     ModelState.Remove("Email");
  // Instantiate the validator
@@ -516,21 +514,7 @@ public async Task<IActionResult> Claims(Claims claims, IFormFile supportingDocum
             }
         }
 
-        /*[HttpGet]
-        [Authorize(Roles = "Admin")] // Ensure only Admins can access
-        public IActionResult RedirectToManage(string userId)
-        {
-            if (string.IsNullOrEmpty(userId))
-            {
-                TempData["ErrorMessage"] = "User ID is required.";
-                return RedirectToAction("ViewLecturers");
-            }
 
-            // Construct the URL for profile management
-            string manageUrl = $"/Identity/Account/Manage?userId={userId}";
-
-            return Redirect(manageUrl);
-        }*/
 
         public async Task<IActionResult> DownloadFile(int id)
         {
@@ -804,21 +788,29 @@ public async Task<IActionResult> Claims(Claims claims, IFormFile supportingDocum
 
         private double CalculateTax(double taxableIncome)
         {
+            //if taxable income is less than or equal to 237100, tax is 18% of the income
             if (taxableIncome <= 237100)
                 return taxableIncome * 0.18;
+            //if taxable income is between 237101 and 370500, tax is 42678 plus 26% of the amount exceeding 237100
             else if (taxableIncome <= 370500)
                 return 42678 + (taxableIncome - 237100) * 0.26;
+            //if taxable income is between 370501 and 512800, tax is 77362 plus 31% of the amount exceeding 370500
             else if (taxableIncome <= 512800)
                 return 77362 + (taxableIncome - 370500) * 0.31;
+            //if taxable income is between 512801 and 673000, tax is 121475 plus 36% of the amount exceeding 512800
             else if (taxableIncome <= 673000)
                 return 121475 + (taxableIncome - 512800) * 0.36;
+            //if taxable income is between 673001 and 857900, tax is 179147 plus 39% of the amount exceeding 673000
             else if (taxableIncome <= 857900)
                 return 179147 + (taxableIncome - 673000) * 0.39;
+            //if taxable income is between 857901 and 1817000, tax is 251258 plus 41% of the amount exceeding 857900
             else if (taxableIncome <= 1817000)
                 return 251258 + (taxableIncome - 857900) * 0.41;
+            //if taxable income exceeds 1817000, tax is 644489 plus 45% of the amount exceeding 1817000
             else
                 return 644489 + (taxableIncome - 1817000) * 0.45;
         }
+
         [HttpGet]
         public IActionResult GenerateReportForm(string lecturerId)
         {
