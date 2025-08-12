@@ -28,10 +28,11 @@
 10. ▶️ [How to Use](#%EF%B8%8F-how-to-use)  
 11. 📜 [Licensing](#-licensing)  
 12. 🔌 [Plugins](#-plugins)  
-13. 🙌 [Credits](#-credits)  
-14. 🌐 [GitHub Link](#-github-link)  
-15. 🔑 [Admin Login Credentials](#-admin-login-credentials)  
-16. 📚 [References](#-references)  
+13. 🙌 [Credits](#-credits)
+14. 🎥 [Demonstration Video](#-demonstration-video) 
+15. 🌐 [GitHub Link](#-github-link)  
+16. 🔑 [Admin Login Credentials](#-admin-login-credentials)  
+17. 📚 [References](#-references)  
 
 ---
 
@@ -157,6 +158,10 @@ This project was developed and tested by **Braden Caleb Perumal (ST10287165)**.
 
 ---
 
+## 🎥 Demonstration Video
+📹 [Watch Video](https://dlssa-my.sharepoint.com/:v:/g/personal/caleb_dlssa_onmicrosoft_com/EaMN_Xz0Z8xJrQbsJpcof1EBRVFQ5RxqHqee_BqCOPACYQ)
+
+---
 ## 🌐 GitHub Link  
 🔗 [GitHub Repository](https://github.com/BradenCalebPerumal/ClaimEase-CMCS.git)  
 
