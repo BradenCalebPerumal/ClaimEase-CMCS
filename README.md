@@ -1,4 +1,14 @@
-# 📄 ClaimEase CMCS – Contractor Monthly Claim System
+
+<div align="center">
+
+<h1>📄 ClaimEase CMCS – Contractor Monthly Claim System</h1>
+
+<h1>
+  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=700&size=28&duration=3000&pause=1000&color=40E0D0&center=true&vCenter=true&width=1000&lines=📄+Streamlining+Lecturer+Claim+Management;⚙️+Efficient+Admin+and+Submission+Workflows;👨‍💻+Developed+by+Braden+Caleb+Perumal" alt="Typing SVG" />
+</h1>
+
+</div>
+
 
 **👤 Name:** Braden Caleb Perumal  
 **🎓 Student Number:** ST10287165  
@@ -148,7 +158,7 @@ This project was developed and tested by **Braden Caleb Perumal (ST10287165)**.
 ---
 
 ## 🌐 GitHub Link  
-🔗 [GitHub Repository](https://github.com/VCWVL/prog6212-poe-CalebPerumal28.git)  
+🔗 [GitHub Repository](https://github.com/BradenCalebPerumal/ClaimEase-CMCS.git)  
 
 ---
 
