@@ -30,9 +30,10 @@
 12. 🔌 [Plugins](#-plugins)  
 13. 🙌 [Credits](#-credits)
 14. 🎥 [Demonstration Video](#-demonstration-video) 
-15. 🌐 [GitHub Link](#-github-link)  
-16. 🔑 [Admin Login Credentials](#-admin-login-credentials)  
-17. 📚 [References](#-references)  
+15. 🌐 [GitHub Link](#-github-link)
+16. 📑 [Web App Powerpoint Presentation](#-Web-App-Powerpoint-Presentation)   
+17. 🔑 [Admin Login Credentials](#-admin-login-credentials)  
+18. 📚 [References](#-references)  
 
 ---
 
@@ -166,7 +167,11 @@ This project was developed and tested by **Braden Caleb Perumal (ST10287165)**.
 🔗 [GitHub Repository](https://github.com/BradenCalebPerumal/ClaimEase-CMCS.git)  
 
 ---
+---
+## 📑 Web App Powerpoint Presentation  
+🔗 [View Presentation]([https://github.com/BradenCalebPerumal/ClaimEase-CMCS.git](https://dlssa-my.sharepoint.com/:p:/g/personal/caleb_dlssa_onmicrosoft_com/EWnuEcPjkE9KpmwEGbLxkUYBNSN9cM760VUIvUERhCm8DQ?e=xI2GX8))  
 
+---
 ## 🔑 Admin Login Credentials  
 - **Email:** admin@cmcs.com  
 - **Password:** Admin123@#  
