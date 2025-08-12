@@ -169,7 +169,7 @@ This project was developed and tested by **Braden Caleb Perumal (ST10287165)**.
 ---
 ---
 ## 📑 Web App Powerpoint Presentation  
-🔗 [View Presentation]([https://github.com/BradenCalebPerumal/ClaimEase-CMCS.git](https://dlssa-my.sharepoint.com/:p:/g/personal/caleb_dlssa_onmicrosoft_com/EWnuEcPjkE9KpmwEGbLxkUYBNSN9cM760VUIvUERhCm8DQ?e=xI2GX8))  
+🔗 [View Presentation](https://dlssa-my.sharepoint.com/:p:/g/personal/caleb_dlssa_onmicrosoft_com/EWnuEcPjkE9KpmwEGbLxkUYBNSN9cM760VUIvUERhCm8DQ?e=xI2GX8)  
 
 ---
 ## 🔑 Admin Login Credentials  
