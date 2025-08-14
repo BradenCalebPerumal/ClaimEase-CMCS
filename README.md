@@ -155,8 +155,10 @@ The application does not use external plugins beyond the necessary .NET packages
 ---
 
 ## 🙌 Credits  
-This project was developed and tested by **Braden Caleb Perumal (ST10287165)**.  
 
+ 👨‍💻 Braden Caleb Perumal (ST10287165)  
+ 📧 **Email:** [calebperumal28@gmail.com](mailto:calebperumal28@gmail.com)
+ 
 ---
 
 ## 🎥 Demonstration Video
